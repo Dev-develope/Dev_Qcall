@@ -1,85 +1,138 @@
 "use client";
-
 import React, { useState } from "react";
-import { CrossIcon, RightIcon } from "./RightIcon";
+import { CheckCircle, XCircle } from "lucide-react";
 
-export default function PricingTable() {
+const plans = [
+  { name: "Starter", price: 99 },
+  { name: "Growth", price: 159 },
+  { name: "Enterprise", price: 389 },
+  { name: "Unicorn", price: 30000 },
+];
+
+const features = [
+  {
+    section: "Basic",
+    items: [
+      { label: "Option 1", availability: [true, true, true, true] },
+      { label: "Option 2", availability: [true, true, true, true] },
+      { label: "Option 3", availability: [false, true, true, true] },
+      { label: "Option 4", availability: [false, true, true, true] },
+      { label: "Option 5", availability: [false, true, true, true] },
+      { label: "Option 6", availability: [false, false, true, true] },
+      { label: "Option 7", availability: [false, false, false, true] },
+      { label: "Option 8", availability: [false, false, false, true] },
+      { label: "Option 9", availability: [false, false, false, true] },
+      { label: "Option 10", availability: [false, false, false, true] },
+    ],
+  },
+  {
+    section: "Others",
+    items: [
+      { label: "Option 1", availability: [false, true, true, true] },
+      { label: "Option 2", availability: [false, false, true, true] },
+      { label: "Option 3", availability: [false, false, false, true] },
+      { label: "Option 3", availability: [false, false, false, true] },
+      { label: "Option 4", availability: [false, false, false, true] },
+    ],
+  },
+];
+
+const PricingTable = () => {
   const [isAnnual, setIsAnnual] = useState(false);
 
-  const plans = [
-    { name: "Starter", monthly: 99, annually: 99 * 12 * 0.6 },
-    { name: "Growth", monthly: 159, annually: 159 * 12 * 0.6 },
-    { name: "Enterprise", monthly: 389, annually: 389 * 12 * 0.6 },
-    { name: "Unicorn", monthly: 30000, annually: 30000 * 12 * 0.6 },
-  ];
-
-  const features = [
-    {
-      category: "Basic",
-      options: [
-        "Option 1",
-        "Option 2",
-        "Option 3",
-        "Option 4",
-        "Option 5",
-        "Option 6",
-        "Option 7",
-        "Option 8",
-        "Option 9",
-        "Option 10",
-      ],
-    },
-    {
-      category: "Others",
-      options: ["Option 1", "Option 2", "Option 3", "Option 4"],
-    },
-  ];
-
   return (
-    <div className="flex flex-col items-center p-6">
-      <h2 className="text-xl font-semibold">Compare QCall.AI Plans</h2>
-      <p className="text-gray-500 text-sm mb-4">
-        Features comparison table for our plans
-      </p>
-      <div className="w-full max-w-2xl overflow-auto">
-        <table className="w-full border-2 rounded-2xl text-sm text-left">
+    <div className="p-6 w-full max-w-7xl mx-auto">
+      <div className="text-center mb-6">
+        <h2 className="text-2xl font-bold text-gray-800">Compare QCall.AI Plans</h2>
+        <p className="text-sm text-gray-500">Features comparison table for our plans</p>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow p-4 overflow-x-auto">
+        <table className="min-w-full table-auto">
           <thead>
-            <tr className="bg-gray-100">
-              <th className="p-4">Features</th>
-              {plans.map((plan,index) => (
-                <th key={index} className="p-4 text-center">
-                  <div className="font-semibold">{plan.name}</div>
-                  <div className="text-lg font-bold">
-                    ${isAnnual ? plan.annually.toFixed(0) : plan.monthly}{" "}
-                    <span className="text-sm">/MO</span>
+            <tr className="">
+              <th className="text-left p-4">
+                <div className="flex items-center gap-4">
+                  <label className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      name="billing"
+                      checked={isAnnual}
+                      onChange={() => setIsAnnual(!isAnnual)}
+                      className="sr-only peer"
+                    />
+                    <div className="w-11 h-6 relative bg-gray-200 rounded-full peer-checked:bg-[#00a7e6] transition-all">
+                      <div
+                        className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow transform transition-transform ${
+                          isAnnual ? "translate-x-full" : ""
+                        }`}
+                      />
+                    </div>
+                    <span className={`text-sm ${!isAnnual ? "text-black font-medium" : "text-gray-500"}`}>
+                      Monthly
+                    </span>
+                  </label>
+
+                  <label className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      name="billing"
+                      checked={isAnnual}
+                      onChange={() => setIsAnnual(true)}
+                      className="sr-only peer"
+                    />
+                    <span className={`text-sm ${isAnnual ? "text-black font-medium" : "text-gray-500"}`}>
+                      Annually <span className="text-xs text-[#00a7e6]">(Save 40%)</span>
+                    </span>
+                  </label>
+                </div>
+              </th>
+              {plans.map((plan) => (
+                <th key={plan.name} className="text-center p-4">
+                  <div className="font-semibold text-gray-800">{plan.name}</div>
+                  <div className="text-xl font-bold">
+                    $
+                    {isAnnual
+                      ? (plan.price * 12 * 0.6).toFixed(2)
+                      : plan.price.toFixed(2)}
+                    <span className="text-sm font-normal">/MO</span>
                   </div>
                 </th>
               ))}
             </tr>
           </thead>
           <tbody>
-            {features.map((feature,index) => (
-              <div key={index}>
+            {features.map((section, sectionIndex) => (
+              <React.Fragment key={sectionIndex}>
                 <tr className="bg-gray-50">
-                  <td className="p-4 font-medium" colSpan={plans.length + 1}>
-                    {feature.category}
+                  <td
+                    colSpan={plans.length + 1}
+                    className="p-2 text-left font-semibold text-sm text-gray-600"
+                  >
+                    {section.section}
                   </td>
                 </tr>
-                {feature.options.map((option, idx) => (
-                  <tr key={`${feature.category}-${idx}`}>
-                    <td className="p-4 border-b">{option}</td>
-                    {plans.map((plan, planIdx) => (
-                      <td key={planIdx} className="p-4 text-center border-b">
-                        {Math.random() > 0.5 ? <RightIcon /> : <CrossIcon />}
+                {section.items.map((item, i) => (
+                  <tr key={i} className="border-b border-gray-200">
+                    <td className="p-2 text-sm text-gray-700">{item.label}</td>
+                    {item.availability.map((available, planIdx) => (
+                      <td key={planIdx} className="text-center">
+                        {available ? (
+                          <CheckCircle className="text-[#00a7e6] inline w-5 h-5" />
+                        ) : (
+                          <XCircle className="text-red-400 inline w-5 h-5" />
+                        )}
                       </td>
                     ))}
                   </tr>
                 ))}
-              </div>
+              </React.Fragment>
             ))}
           </tbody>
         </table>
       </div>
     </div>
   );
-}
+};
+
+export default PricingTable;

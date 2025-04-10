@@ -51,7 +51,7 @@ export default function Language({ img,route }) {
                                     <div className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-lg">Hindi</div>
                                 </div>
                                 <div className="w-full">
-                                <WavePlayer/>
+                                <WavePlayer audio={"/assets/eCommerce.wav"}/>
                                     {/* <Image
                                         src={audioPlayer}
                                         alt="Audio Player"
@@ -69,13 +69,14 @@ export default function Language({ img,route }) {
                                     <div className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-lg">English</div>
                                 </div>
                                 <div className="w-full">
-                                    <Image
+                                <WavePlayer audio={"/assets/eCommerce.wav"}/>
+                                    {/* <Image
                                         src={audioPlayer}
                                         alt="Audio Player"
                                         width={350}
                                         height={50}
                                         className="w-full h-auto"
-                                    />
+                                    /> */}
                                 </div>
                             </div>
 
@@ -86,13 +87,14 @@ export default function Language({ img,route }) {
                                     <div className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded-lg">French</div>
                                 </div>
                                 <div className="w-full">
-                                    <Image
+                                <WavePlayer audio={"/assets/eCommerce.wav"}/>
+                                    {/* <Image
                                         src={audioPlayer}
                                         alt="Audio Player"
                                         width={350}
                                         height={50}
                                         className="w-full h-auto"
-                                    />
+                                    /> */}
                                 </div>
                             </div>
                         </div>

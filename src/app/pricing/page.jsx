@@ -24,7 +24,7 @@ export default function page() {
             <SingleButton title="Get a Demo Today!" />
         </Hero>
        <PricePlan/>
-       {/* <PricingTable/> */}
+       <PricingTable/>
         <Exploring />
     </>)
 }

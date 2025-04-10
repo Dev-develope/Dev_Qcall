@@ -62,14 +62,14 @@ export default function ExploreAIVoice() {
               </p>
 
               {/* Audio Player Placeholder */}
-              <Image
+              {/* <Image
                                 src={audioPlayer}
                                 alt="Audio Player"
                                 width={350}
                                 height={50}
                                 className="mb-2"
-                            />
-              {/* <WavePlayer audio={"/path"}/> */}
+                            /> */}
+              <WavePlayer audio="/assets/eCommerce.wav"/>
               {/* Speed Controls */}
               <div className="flex gap-2 items-center mt-3">
                 <span className="text-sm font-semibold">Speed</span>

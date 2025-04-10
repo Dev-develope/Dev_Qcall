@@ -160,11 +160,11 @@ export const pricingHeroData = [
     {
         id: 1,
         heading: "Pricing",
-        h1: "Partner With Us And",
-        h2: "Unleash A World Of Opportunities",
+        h1: "Plans & Pricing   ",
+        h2: "",
         para2: "",
         para3: "",
-        buttonText: "Become a Partner"
+        buttonText: ""
     }
 ];
 
