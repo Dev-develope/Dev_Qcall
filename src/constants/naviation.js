@@ -317,9 +317,14 @@ export const menuItems = [
         sortDec: "Automate Appointment Reminder & follow Ups"
       },
       {
-        text: "Legal",
+        text: "Legal-Profesional",
         url: "/legal-profesional",
         sortDec: "Improve Client Communication & meeting reminder"
+      },
+      {
+        text: "Professional Services",
+        url: "/professional",
+        sortDec: "Improve client communication and meeting reminders"
       },
       {
         text: "Retail",

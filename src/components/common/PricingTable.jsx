@@ -41,7 +41,7 @@ const PricingTable = () => {
   const [isAnnual, setIsAnnual] = useState(false);
 
   return (
-    <div className="p-6 w-full max-w-7xl mx-auto">
+    <div className="p-6 w-full max-w-7xl mx-auto mb-10">
       <div className="text-center mb-6">
         <h2 className="text-2xl font-bold text-gray-800">Compare QCall.AI Plans</h2>
         <p className="text-sm text-gray-500">Features comparison table for our plans</p>

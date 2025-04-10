@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Navbar from "./Navbar";
-import InquiryForm from "./inquiryForm";
 
 export default function HeroBackgroundImage({ data }) {
     return (
@@ -27,9 +26,6 @@ export default function HeroBackgroundImage({ data }) {
                     </h1>
                 </div>
             </div>
-            {/* <div className="mt-[-5rem] h-[100rem]">
-                <InquiryForm />
-            </div> */}
         </>
     );
 }

@@ -21,7 +21,7 @@ import record from "../../../../public/images/qcallAi/3Solution-Retail Networks/
 export default function page() {
     return (<>
         <Hero data={retailHeroData[0]} herocardData={retailHerocardData}>
-            <SingleButton title="Get a Demo Today!!" />
+            <SingleButton title="Get a Demo Today!!" route={"https://cal.com/team/tinycheque/qcall"}/>
         </Hero>
         <LogoSlider />
         <InsuranceSafetySection data={reatilSafety[0]} />

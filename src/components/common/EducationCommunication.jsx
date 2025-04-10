@@ -49,7 +49,7 @@ export default function EducationCommunication() {
       </div>
 
       {/* Second Features Section */}
-      <h3 className="text-2xl font-bold mt-16">Powered by the Most Reliable Communication Network</h3>
+      <h3 className="text-3xl font-bold mt-16">Powered by the Most Reliable Communication Network</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-6">
         {[
           {

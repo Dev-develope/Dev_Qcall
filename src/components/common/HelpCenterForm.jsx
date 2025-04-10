@@ -3,9 +3,10 @@ import CommonButton from "./Button";
 export default function HelpCenterForm() {
     return (<>
         <div className="h-[28rem] w-full sm:w-4/5 md:w-3/5 lg:w-2/3 flex flex-col justify-center items-center bg-white rounded-2xl shadow-lg p-10 ">
-            <p className="px-4 py-2 rounded-full inline-block text-xs mb-4 border border-gray-400">
+            <p className="px-4 py-2 rounded-full inline-block text-xs border border-gray-400">
                 {"Get in Touch"}
             </p>
+            <h1 className="text-3xl mt-2">Send Us Messages</h1>
             <form class="w-full mx-auto">
                 <div className="flex flex-row gap-5">
                     <div class="mb-5 w-1/2">

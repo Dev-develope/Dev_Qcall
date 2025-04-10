@@ -10,11 +10,11 @@ import LogoSlider from "src/components/common/LogoSlider";
 import RealEstateCommunciation from "src/components/common/RealEstateCommunciation";
 import SecurityCompliance from "src/components/common/SecurityComplianceSection";
 import SingleButton from "src/components/common/SingleButton";
-import { designForInsuranceData, designForPartnerData, MainFeaturePartnerData, partnerHerocardData, PartnerHeroData, securityData } from "src/constants/SolutionData";
+import { designForInsuranceData, designForPartnerData, MainFeaturePartnerData, partnerHerocardData, PartnerHeroData, PartnerHeroData1, securityData } from "src/constants/SolutionData";
 
 export default function page() {
     return (<>
-        <Hero data={PartnerHeroData[0]} herocardData={partnerHerocardData} className="text-start">
+        <Hero data={PartnerHeroData1[0]} herocardData={partnerHerocardData} className="text-start">
             <SingleButton title="Become a Partner" />
         </Hero>
         <SecurityCompliance securityData={MainFeaturePartnerData} />

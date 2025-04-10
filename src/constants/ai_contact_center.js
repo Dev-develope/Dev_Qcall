@@ -238,3 +238,73 @@ export const retailDataG = [
         imageSrc: "/mnt/data/image.png"
     }
 ]
+
+export const enterPriseDataA = [
+    {
+        span: "Use Cases",
+        h1: "IT services",
+        para: "",
+        playeradd:"/assets/eCommerce.wav",
+        list: [{ text: "Companies can use a single AI app to phone, chat, and meet, as well as transfer calls and move conversations to their preferred devices." }, { text: "Welcome to QCall Ai, your go-to for top-tier IT services. Our expert developers and designers are dedicated to bringing yourdigital projects to life. From software development to web and mobile app design, we've got you covered. Let's turn your vision into reality, together." }],
+        imageSrc: "/mnt/data/image.png"
+    }
+]
+export const enterPriseDataB = [
+    {
+        span: "Use Cases",
+        h1: "Recruitment",
+        para: "",
+        playeradd:"/assets/eCommerce.wav",
+        list: [{ text: "Companies can use a single AI app to phone, chat, and meet, as well as transfer calls and move conversations to their preferred devices." }, { text: "Welcome to QCall Ai, your go-to for top-tier IT services. Our expert developers and designers are dedicated to bringing your digital projects to life. From software development to web and mobile app design, we've got you covered. Let's turn your vision into reality, together" }],
+        imageSrc: "/mnt/data/image.png"
+    }
+]
+export const enterPriseDataC = [
+    {
+        span: "Use Cases",
+        h1: "Sales CRM Solution",
+        para: "",
+        playeradd:"/assets/eCommerce.wav",
+        list: [{ text: "Companies can use a single AI app to phone, chat, and meet, as well as transfer calls and move conversations to their preferred devices." }, { text: "Welcome to QCall Ai, your go-to for top-tier IT services. Our expert developers and designers are dedicated to bringing your digital projects to life. From software development to web and mobile app design, we've got you covered. Let's turn your vision into reality, together." }],
+        imageSrc: "/mnt/data/image.png"
+    }
+]
+
+
+
+export const ProfessionalDataA = [
+    {
+        span: "Smarter Client Engagement",
+        h1: "Rapid Issue Resolution",
+        para: "Provide top-tier support with AI-powered insights. Custom call routing ensures clients connect with the right expert instantly.",
+        list: [{ text: "AI-powered transcriptions for complete call records" }, { text: "Custom workflows to streamline support." }, { text: "Ensure faster response times & happier clients." }],
+        imageSrc: "/mnt/data/image.png"
+    }
+]
+export const ProfessionalDataB = [
+    {
+        span: "Smarter Client Engagement",
+        h1: "Boost Client Conversions & Close Deals Faster",
+        para: "Stay ahead in every sales conversation with real-time AI guidance. Instantly access past interactions, handle objections smoothly, and capture every important detail.",
+        list: [{ text: "AI-powered follow-ups & automatic summaries." }, { text: "Actionable insights to improve engagement." }, { text: "Faster decision-making for better conversions." }],
+        imageSrc: "/mnt/data/image.png"
+    }
+]
+export const ProfessionalDataC = [
+    {
+        span: "Smarter Client Engagement",
+        h1: "Security & Compliance Protect Client Confidentiality",
+        para: "No more switching between apps. With QCallAIs unified workspace, manage client calls, emails, texts, and meetings in one intuitive platform.",
+        list: [{ text: "Seamless integration with your CRM & productivity tools" }, { text: "One-click access to previous client interactions." }, { text: "Boost efficiency & keep your team in sync." }],
+        imageSrc: "/mnt/data/image.png"
+    }
+]
+export const ProfessionalDataD = [
+    {
+        span: "Smarter Client Engagement",
+        h1: "Security & Compliance Protect Client Confidentiality",
+        para: "Your clients trust you with sensitive information. QCallAI ensures every call, message, and file is fully encrypted to meet global security standards.",
+        list: [{ text: "End-to-end encryption for maximum data protection." }, { text: "Single sign-on & role-based access controls." }, { text: "Compliance with industry-leading security protocols" }],
+        imageSrc: "/mnt/data/image.png"
+    }
+]

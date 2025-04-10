@@ -9,7 +9,7 @@ import LogoSlider from "src/components/common/LogoSlider";
 import RetailFeatures from "src/components/common/RetailFeatures";
 import SingleButton from "src/components/common/SingleButton";
 import {leaglProfessionalDataA, leaglProfessionalDataB, leaglProfessionalDataC} from "src/constants/ai_contact_center";
-import { leaglProfeData, legalFeaturesData, legalHerocardData, legalHeroData, reatilSafety } from "src/constants/SolutionData";
+import { leaglProfeData, legalFeaturesData, legalFeaturesData1, legalHerocardData, legalHeroData, reatilSafety } from "src/constants/SolutionData";
 import securityImg from "../../../../public/images/qcallAi/3Solution-Legal Professionals/security.png"
 import boostproductImg from "../../../../public/images/qcallAi/3Solution-Legal Professionals/boostproduct.png"
 import trackclientImg from "../../../../public/images/qcallAi/3Solution-Legal Professionals/trackclient.png"
@@ -18,7 +18,7 @@ import trackclientImg from "../../../../public/images/qcallAi/3Solution-Legal Pr
 export default function page() {
     return (<>
         <Hero data={legalHeroData[0]} herocardData={legalHerocardData}>
-            <SingleButton title="Get a Demo Today!" />
+            <SingleButton title="Get a Demo Today!" route={"https://cal.com/team/tinycheque/qcall"}/>
         </Hero>
         <LogoSlider />
         <InsuranceSafetySection data={reatilSafety[0]} />
@@ -29,7 +29,7 @@ export default function page() {
         <div className="flex justify-center items-center mt-1 mb-10">
             <CommonButton className="bg-[#00a7e6] font-light text-white" title="try it now for free!!!" />
         </div>
-        <RetailFeatures data={legalFeaturesData} />
+        <RetailFeatures data={legalFeaturesData1} />
         <Exploring />
     </>)
 }

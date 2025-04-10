@@ -3,14 +3,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import WaveSurfer from "wavesurfer.js";
 import { FaPlayCircle, FaPauseCircle } from "react-icons/fa";
-// import audioPlay from "../../../public/assets/E-commerce_audio_d7048e74df71fecb.wav"
-const WavePlayer = ({ audio, index, currentPlayingIndex, setCurrentPlayingIndex,hight=20 }) => {
+const WavePlayer = ({ audio, index, currentPlayingIndex, setCurrentPlayingIndex,hight=20 ,playbackRate}) => {
 
   console.log(audio,"audio")
   const containerRef = useRef(null);
   const waveSurferRef = useRef(null);
   const [isPlaying, toggleIsPlaying] = useState(false);
   const [audioExists, setAudioExists] = useState(false);
+
+  useEffect(() => {
+    if (waveSurferRef.current) {
+      waveSurferRef.current.setPlaybackRate(playbackRate);
+    }
+  }, [playbackRate]);
+
+  
 
   useEffect(() => {
     const waveSurfer = WaveSurfer.create({
@@ -23,7 +30,7 @@ const WavePlayer = ({ audio, index, currentPlayingIndex, setCurrentPlayingIndex,
       progressColor: "#06749d",
       cursorColor: "transparent",
     });
-
+    waveSurfer.setPlaybackRate(playbackRate || 1 );
     waveSurferRef.current = waveSurfer;
 
     return () => {

@@ -34,7 +34,7 @@ export default function EnterpriseCard() {
         Proven Results, Real Impact
       </h1>
       <p className="text-gray-600 mb-6 text-center text-sm max-w-2xl mx-auto">
-        WE'VE EMPOWERED BUSINESSES LIKE YOURS WITH REMARKABLE OUTCOMES
+      WE'VE EMPOWERED BUSINESSES LIKE YOURS WITH REMARKABLE OUTCOMES
       </p>
 
       <div className="w-full rounded-lg p-6">
