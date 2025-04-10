@@ -12,21 +12,18 @@ import RealEstateCommunciation from "src/components/common/RealEstateCommunciati
 import SecurityCompliance from "src/components/common/SecurityComplianceSection";
 import SingleButton from "src/components/common/SingleButton";
 import { designForInsuranceData, designForPartnerData, MainFeaturePartnerData, partnerHerocardData, PartnerHeroData, securityData } from "src/constants/SolutionData";
-
+import BolgImg from "../../../../public/images/BG.png"
 import { usePathname } from "next/navigation";
 import BlogArticle from "src/components/common/BlogArticle";
 import BlogPost from "src/components/common/BlogPost";
+import HeroBackgroundImage from "src/components/common/HeroBackgroundImage";
 export default function page() {
     const path = usePathname();
     const isBlogPage = path === "/blog";
+    const policyData = { para: "Blogs", heading: " Our Blogs" }
     return (<>
-        <Hero data={PartnerHeroData[0]} herocardData={partnerHerocardData} className="min-h-[10rem] text-start ">
-            {!isBlogPage ? <SingleButton title="Become a Partner" /> : ""}
-        </Hero>
+       <HeroBackgroundImage data={policyData} img ={BolgImg}/>
         <BlogArticle/>
-   
         <Exploring />
-
-        {/* <BlogPost/> */}
     </>)
 }

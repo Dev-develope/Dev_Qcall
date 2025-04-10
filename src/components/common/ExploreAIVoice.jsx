@@ -8,6 +8,14 @@ import { useState } from "react";
 export default function ExploreAIVoice() {
   const [playbackRate, setPlaybackRate] = useState(1);
   const [currentPlayingIndex, setCurrentPlayingIndex] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const agents = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+
+  const filteredAgents = agents.filter((agent) =>
+    `Agent ${agent}`.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-6 mt-10">
       <div className="max-w-6xl mx-auto">
@@ -23,6 +31,7 @@ export default function ExploreAIVoice() {
               type="text"
               placeholder="Search"
               className="w-full p-2 border border-gray-300 rounded-lg"
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
 
@@ -70,7 +79,7 @@ export default function ExploreAIVoice() {
 
         {/* AI Voice Cards */}
         <div className="grid md:grid-cols-3 gap-6 mt-6">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((agent) => (
+          {filteredAgents?.map((agent) => (
             <div key={agent} className="bg-white p-4 rounded-lg shadow-md">
               <div className="flex justify-between items-center">
                 <h3 className="text-lg font-light">Agent {agent}</h3>

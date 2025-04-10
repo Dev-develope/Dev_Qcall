@@ -45,7 +45,7 @@ export default function PricePlan() {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center p-8 bg-white mt-[10rem]">
+    <div className="w-full flex flex-col items-center p-8 bg-white mt-5">
       {/* Toggle Billing Cycle */}
       <div className="flex items-center gap-4 bg-gray-100 p-2 rounded-full text-sm font-medium">
         <button

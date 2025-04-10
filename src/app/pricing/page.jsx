@@ -18,11 +18,11 @@ import enterPrise3 from "../../../public/images/8EnterpriseSolution/enterPrise3.
 import ContactCenterEcosystem from "src/components/common/ContactCenterEcosystem";
 import PricePlan from "src/components/common/PricePlan";
 import PricingTable from "src/components/common/PricingTable";
+import HeroBackgroundImage from "src/components/common/HeroBackgroundImage";
 export default function page() {
+    const policyData = { para: "Pricing", heading: "Plans & Pricing" }
     return (<>
-        <Hero data={pricingHeroData[0]} herocardData={legalHerocardData}>
-            <SingleButton title="Get a Demo Today!" />
-        </Hero>
+        <HeroBackgroundImage data={policyData}/>
        <PricePlan/>
        <PricingTable/>
         <Exploring />
