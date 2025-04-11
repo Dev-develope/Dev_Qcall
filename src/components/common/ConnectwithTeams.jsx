@@ -5,7 +5,7 @@ const ConnectwithTeams = ({ data }) => {
         <div className="bg-white text-center pt-10">
             {/* Label */}
             {data.label && (
-                <div className="inline-block border px-3 py-1 rounded-full text-xs font-light mb-1">
+                <div className="inline-block border border-[#00a7e6] px-3 py-1 rounded-full text-xs font-light mb-1">
                     {data.label}
                 </div>
             )}

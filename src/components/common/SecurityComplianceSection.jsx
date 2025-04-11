@@ -7,7 +7,7 @@ export default function SecurityCompliance({ securityData }) {
 
   return (
     <section className="py-16 px-4 max-w-6xl mx-auto text-center">
-      <span className="px-4 py-1 text-xs border-[#00a7e6] rounded-full">
+      <span className="px-4 py-1 text-xs border border-[#00a7e6] rounded-full">
         {securityData?.badge}
       </span>
       <h2 className="text-3xl font-bold text-gray-900 mt-4">
@@ -21,7 +21,7 @@ export default function SecurityCompliance({ securityData }) {
           {securityData?.features?.map((item, index) => (
             <div
               key={index}
-              className="border border-gray-300 rounded-lg p-6 items-start space-x-4 shadow-sm hover:shadow-md transition"
+              className="border border-[#00a7e6] rounded-lg p-6 items-start space-x-4 shadow-sm hover:shadow-md transition"
             >
               <div className="flex justify-between items-center mb-2 bg-[#00a7e6] rounded-full max-w-12 max-h-12">
                 {/* {item?.icon} */}

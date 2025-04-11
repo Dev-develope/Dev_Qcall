@@ -18,7 +18,7 @@ const InsuranceSafetySection = ({ data }) => {
 
             {/* Content */}
             <div className="relative  max-w-2xl px-6">
-                <div className="inline-block border border-green-300 px-3 py-1 rounded-full text-xs font-light mb-4">
+                <div className="inline-block border border-[#00a7e6] px-3 py-1 rounded-full text-xs font-light mb-4">
                     {data.label}
                 </div>
                 <h1 className="text-3xl md:text-4xl font-light mb-4">

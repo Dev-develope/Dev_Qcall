@@ -26,7 +26,7 @@ const blogPosts = [
     title: 'Revolutionizing Customer Interaction: Harnessing AI Voicebots in Telecommunication',
     excerpt: 'AI voicebots have emerged as a transformative technology in the field of customer service, particularly within the telecommunications sector. These automated systems leverage advanced technologies such as natural language processing...',
     image: meetingImg,
-    category: 'ai-integration',
+    category: 'it-managed-services',
     date: 'FEBRUARY 22, 2025',
     readTime: '2 MINS READ'
   },
@@ -35,7 +35,7 @@ const blogPosts = [
     title: 'Transforming Communication: The Benefits of an AI Voicebot for Inbound and Outbound Calling',
     excerpt: 'AI voicebots represent a significant advancement in communication technology, utilizing sophisticated algorithms to enhance both inbound and outbound calling processes.',
     image: aibootImg,
-    category: 'ai-integration',
+    category: 'product-development',
     date: 'FEBRUARY 22, 2025',
     readTime: '2 MINS READ'
   },
@@ -53,7 +53,7 @@ const blogPosts = [
     title: 'Enhancing Customer Engagement with AI Voicebots for Call Handling',
     excerpt: 'AI voicebots represent a significant advancement in the way businesses handle inbound and outbound calls, leveraging sophisticated technology to enhance customer engagement. Essentially, these are automated systems powered by artificdK',
     image: CutomerEngageImg,
-    category: 'ai-integration',
+    category: 'technology',
     date: 'FEBRUARY 22, 2025',
     readTime: '2 MINS READ'
   },
@@ -71,7 +71,7 @@ const blogPosts = [
     title: 'Transform Your Communication Harnessing the Power of AI Voicebots for Inbound and OuÙ',
     excerpt: 'The core functionality of AI voicebots lies in their ability to interpret spoken language and provide appropriate responses, which significantly enhances the customer experience. They can manage numerous calls simultaneously, reducing wait times  K',
     image: mobileImg,
-    category: 'ai-integration',
+    category: 'ai-devops',
     date: 'FEBRUARY 22, 2025',
     readTime: '2 MINS READ'
   },

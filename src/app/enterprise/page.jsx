@@ -60,6 +60,7 @@ export default function page() {
         <CommonButton
           className="bg-[#00a7e6] font-light text-white"
           title="try it now for free!!!"
+          route={"https://app.qcall.ai/auth/sign-up"}
         />
       </div>
       <HeroBanner waveImage={waveImg} />

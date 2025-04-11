@@ -17,7 +17,7 @@ import imporve from "../../../../public/images/qcallAi/3Solution-Automotive Reta
 export default function page() {
     return (<>
         <Hero data={AutomateHeroData[0]} herocardData={automateHerocardData}>
-            <SingleButton title="Get a Demo Today!" />
+            <SingleButton title="Get a Demo Today!" route={"https://cal.com/team/tinycheque/qcall"}/>
         </Hero>
         <LogoSlider />
         <InsuranceSafetySection data={reatilSafety[0]} />
@@ -26,14 +26,14 @@ export default function page() {
         <CommonCardB cardDatas={automatecardDataB} img={nevermisssales}/>
         <CommonCard cardDatas={automatecardDataC} img={conversation}/>
         <div className="flex justify-center items-center mt-1 mb-10">
-            <CommonButton className="bg-[#00a7e6] font-light text-white" title="try it now for free!!!" />
+            <CommonButton className="bg-[#00a7e6] font-light text-white" title="try it now for free!!!"  route={"https://app.qcall.ai/auth/sign-up"}/>
         </div>
         <ConnectwithTeams data={autoAiPowerdSalesData} />
         <CommonCard cardDatas={automatecardDataD} img={hi}/>
         <CommonCardB cardDatas={automatecardDataE} img={collab}/>
         <CommonCard cardDatas={automatecardDataF} img={imporve}/>
         <div className="flex justify-center items-center mt-1 mb-10">
-            <CommonButton className="bg-[#00a7e6] font-light text-white" title="try it now for free!!!" />
+            <CommonButton className="bg-[#00a7e6] font-light text-white" title="try it now for free!!!" route={"https://app.qcall.ai/auth/sign-up"}/>
         </div>
         <Exploring />
     </>)

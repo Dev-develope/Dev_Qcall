@@ -59,7 +59,7 @@ const QCallHeroSection = ({ videoClip, img }) => {
             </div>
           ))}
         </div>
-        <CommonButton title="Create your AI agent in 30 seconds" className="mt-12 bg-[#00a7e6] hover:bg-purple-700 text-white font-light py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg" />
+        <CommonButton title="Create your AI agent in 30 seconds" className="mt-12 bg-[#00a7e6] text-white font-light py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg" route={"https://cal.com/team/tinycheque/qcall"}/>
       </div>
     </div>
   );

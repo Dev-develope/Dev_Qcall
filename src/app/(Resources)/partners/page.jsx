@@ -15,7 +15,7 @@ import { designForInsuranceData, designForPartnerData, MainFeaturePartnerData, p
 export default function page() {
     return (<>
         <Hero data={PartnerHeroData1[0]} herocardData={partnerHerocardData} className="text-start">
-            <SingleButton title="Become a Partner" />
+            <SingleButton title="Become a Partner" route={"https://cal.com/team/tinycheque/qcall"}/>
         </Hero>
         <SecurityCompliance securityData={MainFeaturePartnerData} />
         <FutureInnovationPage />

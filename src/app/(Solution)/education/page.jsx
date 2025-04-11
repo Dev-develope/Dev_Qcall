@@ -12,7 +12,7 @@ import {educationHerocardData, educationHeroData, eduVertualCommData, eduVertual
 export default function page() {
     return (<>
         <Hero data={educationHeroData[0]} herocardData={educationHerocardData} className="text-center">
-            <DoubleButton title1="Get a Demo & Experience It Yourself!" title2="Book a Demo" route={"https://cal.com/team/tinycheque/qcall"}/>
+            <DoubleButton title1="Get a Demo & Experience It Yourself!" title2="Book a Demo" route={"https://cal.com/team/tinycheque/qcall"} route2={"https://app.qcall.ai/auth/sign-up"}/>
         </Hero>
         <LogoSlider />
         <InsuranceSafetySection data={reatilSafety[0]} />

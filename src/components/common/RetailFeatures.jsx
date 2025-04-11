@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import CommonButton from "./Button";
 
 const RetailFeatures = ({ data }) => {
     return (
@@ -40,9 +41,10 @@ const RetailFeatures = ({ data }) => {
 
             {/* Call-to-Action Button */}
             {data.buttonText && (
-                <button className="mt-8 bg-[#00a7e6] hover:bg-purple-700 font-medium py-3 px-6 rounded-full text-sm shadow-lg">
-                    {data.buttonText}
-                </button>
+                // <button className="mt-8 bg-[#00a7e6] hover:bg-purple-700 font-medium py-3 px-6 rounded-full text-sm shadow-lg">
+                //     {data.buttonText}
+                // </button>
+                <CommonButton title={data.buttonText} className={"mt-8 bg-[#00a7e6] font-medium py-3 px-6 rounded-full text-sm shadow-lg"} route={"https://cal.com/team/tinycheque/qcall"}/>
             )}
         </div>
     );

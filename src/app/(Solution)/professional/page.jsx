@@ -33,7 +33,7 @@ export default function page() {
         <CommonCard cardDatas={ProfessionalDataC} img={ProfesImgD}/>
         <CommonCardB cardDatas={ProfessionalDataD} img={ProfesImgC}/>
         <div className="flex justify-center items-center mt-1 mb-10">
-            <CommonButton className="bg-[#00a7e6] font-light text-white" title="try it now for free!!!" />
+            <CommonButton className="bg-[#00a7e6] font-light text-white" title="try it now for free!!!" route={"https://app.qcall.ai/auth/sign-up"}/>
         </div>
         <RetailFeatures data={professionalFeaturesData} />
         <Exploring />
