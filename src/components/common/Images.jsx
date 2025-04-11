@@ -9,7 +9,7 @@ export default function Images({ img, overlayImg }) {
           alt="QCall.ai Demo"
           width={900}
           height={700}
-          className="rounded-lg object-fit w-[80%] h-[100%]"
+          className="rounded-lg object-fit w-[99%] h-[100%]"
         />
       </div>
 

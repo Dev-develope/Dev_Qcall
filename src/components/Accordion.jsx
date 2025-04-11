@@ -46,7 +46,7 @@ export default function Accordion({ faqData = faqs }) {
             className="text-lg flex justify-between items-center"
           >
             {elm.title}
-            <span className={`transform transition-transform ${currentIndex === index ? "rotate-90" : "rotate-0"}`}>
+            <span className={`transform transition-transform hover:text-[#00a7e6] ${currentIndex === index ? "rotate-90" : "rotate-0"}`}>
             <CircleChevronRight />
             </span>
           </h4>

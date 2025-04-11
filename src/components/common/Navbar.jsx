@@ -400,16 +400,16 @@ export default function Navbar({ className }) {
         </div> */}
 
         {!isMobile && (
-          <div className="flex items-center space-x-4 mr-5">
+          <div className="flex items-center space-x-4 mr-5 w-[15rem]">
             <CommonButton
-              className={`lg:text-sm md:text-xs font-light px-4 py-2 rounded-full ${
+              className={`lg:text-sm md:text-xs font-light px-4 py-2 w-1/2 rounded-full ${
                 scrolled ? "text-black bg-[#00a7e6]" : "text-white bg-[#00a7e6]"
               }`}
               title="Sign up"
               route="https://app.qcall.ai/auth/sign-up"
             />
             <CommonButton
-              className={`lg:text-sm md:text-xs font-light px-4 py-2 rounded-full ${
+              className={`lg:text-sm md:text-xs font-light px-4 py-2 w-1/2 rounded-full ${
                 scrolled ? "text-white bg-black" : "text-black bg-white"
               }`}
               title="Log in"
