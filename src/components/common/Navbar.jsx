@@ -301,7 +301,7 @@ export default function Navbar({ className }) {
 
   return (
     <nav
-      className={`${className} fixed top-0 left-0 w-[100dvw] max-w-full z-[9999] py-5 transition-all duration-300 ${
+      className={`${className} fixed top-0 left-0 w-[100dvw] max-w-full z-[9999] py-2 transition-all duration-300 ${
         scrolled
           ? "bg-gradient-to-r from-[#0b0c1e] via-[#0e0f2a] to-[#101236] text-white shadow-md"
           : " text-white"

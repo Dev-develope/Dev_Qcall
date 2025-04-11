@@ -79,7 +79,7 @@ export default function ExploreAIVoice() {
 
         {/* AI Voice Cards */}
         <div className="grid md:grid-cols-3 gap-6 mt-6">
-          {filteredAgents?.map((agent) => (
+          {filteredAgents?.map((agent,ind) => (
             <div key={agent} className="bg-white p-4 rounded-lg shadow-md">
               <div className="flex justify-between items-center">
                 <h3 className="text-lg font-light">Agent {agent}</h3>
@@ -102,7 +102,7 @@ export default function ExploreAIVoice() {
               <WavePlayer
                 audio="/assets/eCommerce.wav"
                 playbackRate={playbackRate}
-                index={0}
+                index={ind}
                 currentPlayingIndex={currentPlayingIndex}
                 setCurrentPlayingIndex={setCurrentPlayingIndex}
               />
