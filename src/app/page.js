@@ -43,7 +43,7 @@ export default function Home() {
       </Hero>
       <Images img={QcallCombineImage} />
       <CardItem1 />
-      <LogoSlider />
+      {/* <LogoSlider /> */}
       <CardItem2 />
       <CardItem3 />
       <Language img={LanguageIamge} />

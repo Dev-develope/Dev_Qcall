@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const QCallHeroSection = ({ videoClip, img }) => {
   return (
-    <div className={`relative w-full overflow-hidden ${img ? "h-[50rem]" : "h-[45rem]"}`}>
+    <div className={`relative w-full overflow-hidden ${img ? "lg:[50rem] sm:h-full" : "h-[45rem]"}`}>
       {img ? <div className="absolute inset-0 w-full h-full ">
         <Image
           src={img}
