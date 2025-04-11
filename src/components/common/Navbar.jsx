@@ -325,7 +325,7 @@ export default function Navbar({ className }) {
               <li key={item.id} className="relative group">
                 <Link
                   href={item.url}
-                  className={`hover:text-gray-400 text-sm flex items-center space-x-1 ${
+                  className={`hover:text-[#00a7e6] text-sm flex items-center space-x-1 ${
                     scrolled ? "text-white" : "text-white"
                   }`}
                 >
@@ -450,7 +450,7 @@ export default function Navbar({ className }) {
           {menuItems.map((item) => (
             <div key={item.id} className="w-full text-left">
               <button
-                className="w-full text-white text-sm py-3 hover:text-gray-400 flex justify-between items-center"
+                className="w-full text-white text-sm py-3 hover:text-[#00a7e6] flex justify-between items-center"
                 onClick={() => item.hasChildren && toggleSubMenu(item.id)}
               >
                 {item.text}
@@ -476,7 +476,7 @@ export default function Navbar({ className }) {
                       <li key={sub.url} className="py-2 px-4">
                         <Link
                           href={sub.url}
-                          className="hover:text-gray-400 block"
+                          className="hover:text-[#00a7e6] block"
                         >
                           {sub.text}
                         </Link>
