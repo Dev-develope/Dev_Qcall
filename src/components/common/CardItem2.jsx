@@ -9,15 +9,15 @@ export default function CardItem2() {
   const staticCardData = [
     {
       icon: collection,
-      heading: "Seamless Integration",
+      heading: "Collections & Reminders",
       description:
-        "Automate payment reminders and reduce overdue payments effortlessly.",
+        "Automate payment reminders and reduce overdue payments effortlessly",
     },
     {
       icon: fifth,
-      heading: "Data-Driven Insights",
+      heading: "HR & Recruitment",
       description:
-        "AI can pre-screen candidates, schedule interviews, and follow up automatically.",
+        "AI can pre-screen candidates, schedule interviews, and follow up automatically",
     },
   ];
 

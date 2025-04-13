@@ -29,7 +29,7 @@ const QCallHeroSection = ({ videoClip, img }) => {
 
       <div className="relative flex flex-col items-center justify-center min-h-screen px-4 py-16 text-center">
 
-        <div className="inline-block border px-4 py-2 rounded-full text-sm mb-2 text-white">
+        <div className="inline-block border border-[#00a7e6] px-4 py-2 rounded-full text-sm mb-2 text-white">
           What Achievement At Qcall.ai
         </div>
 
@@ -45,7 +45,7 @@ const QCallHeroSection = ({ videoClip, img }) => {
           {driveMoreRevenueData.map((card, index) => (
             <div
               key={index}
-              className=" border border-gray-300 bg-[#050a18] rounded-3xl p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className=" border border-[#00a7e6] bg-[#050a18] rounded-3xl p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               <span className="text-xs mb-2 block">
                 {card.category}
