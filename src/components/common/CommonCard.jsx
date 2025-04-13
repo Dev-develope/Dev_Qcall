@@ -11,7 +11,7 @@ export default function CommonCard({ cardDatas, img }) {
       {cardDatas.map((card, index) => (
         <div
           key={index}
-          className="flex flex-col md:flex-row bg-white overflow-hidden p-6 justify-center items-center"
+          className="flex flex-col md:flex-row bg-white overflow-hidden p-6 justify-center items-center space-x-10"
         >
           <div className="md:w-1/3 flex flex-col justify-center p-6">
             <span className="text-xs px-3 py-1 rounded-full border border-[#00a7e6] self-start">
@@ -34,12 +34,12 @@ export default function CommonCard({ cardDatas, img }) {
               ))}
             </ul>
             {card?.playeradd && (
-              <div className="w-1/2 mt-2 ml-5">
+              <div className="lg:w-1/2 md-w-full mt-2 ml-5">
                 {card?.playeradd && <WavePlayer audio={card?.playeradd} />}
               </div>
             )}
           </div>
-          <div className="md:w-1/3 flex justify-center items-center">
+          <div className="w-full md:w-1/2 flex justify-center">
             <Image
               src={img}
               alt="Chat AI"

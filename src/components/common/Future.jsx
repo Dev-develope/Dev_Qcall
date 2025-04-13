@@ -7,7 +7,7 @@ export default function Future({img}) {
             <div className="container mx-auto space-x-10 flex justify-center items-center">
                 <div className="flex flex-col md:flex-row overflow-hidden p-6 justify-center">
                     <div className="md:w-1/3 flex flex-col p-6">
-                        <span className="px-4 w-1/4 text-center py-1 border border-gray-300 rounded-full text-xs text-black">
+                        <span className="lg:w-1/4 md-w-full text-center py-1 border border-gray-300 rounded-full text-xs text-black">
                             Key Benefits
                         </span>
                         <h2 className="text-2xl font-bold text-gray-800 mt-4">
@@ -25,7 +25,7 @@ export default function Future({img}) {
                                 route={"https://cal.com/team/tinycheque/qcall"}
                             />
                     </div>
-                    <div className="md:w-1/3 flex justify-center items-center">
+                    <div className=" lg:w-1/2 md:w-1/2 flex justify-center items-center">
                         <Image
                             src={img}
                             alt="Chat AI"
