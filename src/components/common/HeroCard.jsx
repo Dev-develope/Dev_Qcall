@@ -8,8 +8,8 @@ const HeroCard = ({ herocardData, className, sampleData }) => {
   const isHelpCenterPage = path === "/helpcenter";
   return (
     <>
-      <div className="relative  flex items-center justify-center mb-10 ">
-        <div className="bg-white rounded-2xl max-w-4xl w-full shadow-lg p-8">
+      <div className="relative  flex items-center justify-center mb-10 overflow-x-auto">
+        <div className="bg-white rounded-2xl max-w-4xl w-full shadow-lg">
           <div className="text-center py-8 px-4">
             <div className="inline-block border border-[#00a7e6]  px-3 py-1 rounded-full text-xs font-light mb-4">
               {herocardData[0]?.sectionTitle}

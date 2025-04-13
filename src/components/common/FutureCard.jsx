@@ -20,10 +20,10 @@ const FeatureCard = ({ icon, title, description }) => (
 // Main component
 const FutureCard = ({ data }) => {
     return (
-        <div className="bg-gray-50 flex justify-center py-20">
-            <div className="max-w-4xl w-full flex flex-col items-center text-center">
+        <div className="bg-gray-50 flex justify-center py-20 px-4">
+            <div className="max-w-4xl w-full flex flex-col items-center text-center px-3">
                 {/* Badge */}
-                <div className="inline-block px-4 py-1 rounded-full bg-white text-sm mb-6 border-[#00a7e6]">
+                <div className="inline-block px-4 py-1 rounded-full bg-white text-sm mb-6 border border-[#00a7e6]">
                     {data.badge}
                 </div>
 

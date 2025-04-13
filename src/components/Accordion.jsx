@@ -33,7 +33,7 @@ export default function Accordion({ faqData = faqs }) {
   }, [currentIndex]);
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 px-4 py-10">
       {faqData.map((elm, index) => (
         <div
           ref={(el) => (parentRefs.current[index] = el)}

@@ -19,7 +19,7 @@ export default function EducationCommunication() {
       </div>
 
       {/* Features Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto ">
         {/* Card */}
         {[
           {
@@ -38,7 +38,7 @@ export default function EducationCommunication() {
             description: "Create a dynamic educational environment where professors and students interact effortlessly through real-time, multi-channel communication.",
           },
         ].map((item, index) => (
-          <div key={index} className="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+          <div key={index} className="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-[#00a7e6]">
             <div className="w-12 h-12 flex justify-center items-center">
               <Image src={item.icon} alt="LOGO" className="w-full h-full object-contain" />
             </div>
@@ -68,7 +68,7 @@ export default function EducationCommunication() {
             description: "Connect students and educators across different time zones and locations without limitations.",
           },
         ].map((item, index) => (
-          <div key={index} className="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+          <div key={index} className="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center border border-[#00a7e6]">
             <div className="w-12 h-12 flex justify-center items-center">
               <Image src={item.icon} alt="LOGO" className="w-full h-full object-contain" />
             </div>
