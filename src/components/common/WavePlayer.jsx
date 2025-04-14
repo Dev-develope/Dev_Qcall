@@ -5,7 +5,6 @@ import WaveSurfer from "wavesurfer.js";
 import { FaPlayCircle, FaPauseCircle } from "react-icons/fa";
 const WavePlayer = ({ audio, index, currentPlayingIndex, setCurrentPlayingIndex,hight=20 ,playbackRate}) => {
 
-  console.log(audio,"audio")
   const containerRef = useRef(null);
   const waveSurferRef = useRef(null);
   const [isPlaying, toggleIsPlaying] = useState(false);

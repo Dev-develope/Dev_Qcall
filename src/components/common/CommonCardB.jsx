@@ -12,7 +12,7 @@ export default function CommonCard({ cardDatas, img }) {
           key={index}
           className="flex flex-col md:flex-row bg-white overflow-hidden p-6 justify-center items-center"
         >
-          <div className="md:w-1/3 flex justify-center items-center">
+          <div className="w-1/3 flex justify-center items-center">
             <Image
               src={img}
               alt="Chat AI"
@@ -21,7 +21,7 @@ export default function CommonCard({ cardDatas, img }) {
               className="rounded-xl border border-gray-200 shadow-md object-contain p-2"
             />
           </div>
-          <div className="md:w-1/3 flex flex-col justify-center p-6">
+          <div className="w-1/3 flex flex-col justify-center p-6">
             <span className="text-xs px-3 py-1 rounded-full border border-[#00a7e6] self-start">
               {card.span}
             </span>
