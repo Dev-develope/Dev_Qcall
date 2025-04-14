@@ -33,7 +33,7 @@ const ecosystemData = [
 
 export default function ContactCenterEcosystem() {
   return (
-    <div className="w-full max-w-6xl mx-auto p-6 mt-5">
+    <div className="w-full max-w-4xl mx-auto p-6 mt-5 ">
       <div className="flex flex-col items-center mb-8">
         <span className="inline-block text-xs px-3 py-1 rounded-full border mb-4">
           Partner Ecosystem
@@ -52,7 +52,7 @@ export default function ContactCenterEcosystem() {
         {ecosystemData.map((item, index) => (
           <div
             key={index}
-            className="border border-[#00a7e6] rounded-lg p-6 flex flex-col justify-between h-full"
+            className="border border-[#00a7e6] rounded-lg p-6 flex flex-col justify-between h-full shadow-xl"
           >
             <div>
               <h2 className="font-bold text-lg mb-1">{item.title}</h2>
