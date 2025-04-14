@@ -40,6 +40,7 @@ import enterPrise3 from "../../../public/images/8EnterpriseSolution/enterPrise3.
 import ContactCenterEcosystem from "src/components/common/ContactCenterEcosystem";
 import HeroBanner from "src/components/common/heroBanner";
 import DoubleButton from "src/components/common/DoubleButton";
+import EnterPriseAudioDetailsCard from "src/components/common/EnterPriseAudioDetailsCard";
 export default function page() {
   return (
     <>
@@ -53,9 +54,11 @@ export default function page() {
       </Hero>
       <ContactCenterEcosystem />
       <ConnectwithTeams data={enterPriseTeamsData} />
-      <CommonCard cardDatas={enterPriseDataA} img={enterPrise1} />
+      {/* <CommonCard cardDatas={enterPriseDataA} img={enterPrise1} />
       <CommonCardB cardDatas={enterPriseDataB} img={enterPrise2} />
-      <CommonCard cardDatas={enterPriseDataC} img={enterPrise3} />
+      <CommonCard cardDatas={enterPriseDataC} img={enterPrise3} /> */}
+
+      <EnterPriseAudioDetailsCard />
       <div className="flex justify-center items-center mt-1 mb-10">
         <CommonButton
           className="bg-[#00a7e6] font-light text-white"
