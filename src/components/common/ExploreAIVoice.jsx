@@ -4,6 +4,7 @@ import audioPlayer from "../../../public/images/Ai voice/voicerecord.png";
 // import audioPlayer1 from "../../../public/asset/eCommerce.wav";
 import WavePlayer from "./WavePlayer";
 import { useState } from "react";
+import { Search } from "lucide-react";
 
 export default function ExploreAIVoice() {
   const [playbackRate, setPlaybackRate] = useState(1);
@@ -26,13 +27,16 @@ export default function ExploreAIVoice() {
 
         {/* Search & Filters */}
         <div className="flex flex-wrap items-center gap-3 bg-white p-4 rounded-lg shadow-md">
-          <div className="flex-1 min-w-[200px]">
+        <div className="flex-1 min-w-[200px] relative">
             <input
               type="text"
               placeholder="Search"
               className="w-full p-2 border border-gray-300 rounded-lg"
               onChange={(e) => setSearchQuery(e.target.value)}
             />
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer">
+              <Search />
+            </div>
           </div>
 
           <div className="flex-1 min-w-[200px]">

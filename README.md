@@ -1,72 +1,143 @@
-import React from 'react';
-import CommonButton from './Button';
-import { driveMoreRevenueData } from 'src/constants/ai-sales';
-import Image from 'next/image';
+"use client";
+import Image from "next/image";
+import audioPlayer from "../../../public/images/Ai voice/voicerecord.png";
+// import audioPlayer1 from "../../../public/asset/eCommerce.wav";
+import WavePlayer from "./WavePlayer";
+import { useState } from "react";
+import { Search } from "lucide-react";
 
-const QCallHeroSection = ({ videoClip, img }) => {
+export default function ExploreAIVoice() {
+  const [playbackRates, setPlaybackRates] = useState({});
+  const [currentPlayingIndex, setCurrentPlayingIndex] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const agents = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+
+  const filteredAgents = agents.filter((agent) =>
+    `Agent ${agent}`.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const handleSpeedChange = (index, rate) => {
+    setPlaybackRates((prev) => ({ ...prev, [index]: rate }));
+  };
+
   return (
-    <div className={`relative w-full overflow-hidden ${img ? "lg:[50rem] sm:h-full" : "h-[45rem]"}`}>
-      {img ? <div className="absolute inset-0 w-full h-full ">
-        <Image
-          src={img}
-          alt="Upgrade Background"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-      </div> :
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute top-0 left-0 object-cover"
-        >
-          <source src={videoClip} type="video/mp4" />
-        </video>}
-
-      {/* <div className="absolute inset-0 bg-[#00a7e6]lack/60 backdrop-blur-sm"></div> */}
-
-
-      <div className="relative flex flex-col items-center justify-center min-h-screen px-4 py-16 text-center">
-
-        <div className="inline-block border px-4 py-2 rounded-full text-sm mb-2 text-white">
-          What Achievement At Qcall.ai
-        </div>
-
-        <h1 className="text-4xl font-light  max-w-4xl mx-auto mb-4 leading-tight text-white">
-          Drive More Revenue, Reduce Manual Tasks
+    <div className="min-h-screen bg-gray-100 py-10 px-6 mt-10">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <h1 className="text-3xl font-semibold text-gray-800 mb-6">
+          Explore AI Voice
         </h1>
 
-        <p className=" text-lg max-w-2xl mx-auto mb-8 text-white">
-          to improve engagement and drive results.
-        </p>
+        {/* Search & Filters */}
+        <div className="flex flex-wrap items-center gap-3 bg-white p-4 rounded-lg shadow-md">
+          <div className="flex-1 min-w-[200px] relative">
+            <input
+              type="text"
+              placeholder="Search"
+              className="w-full p-2 border border-gray-300 rounded-lg"
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer">
+              <Search />
+            </div>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-6 w-full max-w-4xl px-4 text-white">
-          {driveMoreRevenueData.map((card, index) => (
-            <div
-              key={index}
-              className=" border border-gray-300 bg-[#050a18] rounded-3xl p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-            >
-              <span className="text-xs mb-2 block">
-                {card.category}
-              </span>
-              <h3 className="text-xl font-semibold mb-4">
-                {card.title}
-              </h3>
-              <p className="text-sm">
-                {card.description}
+          <div className="flex-1 min-w-[200px]">
+            <select className="w-full p-2 border border-gray-300 rounded-lg">
+              <option>Select Content</option>
+            </select>
+          </div>
+
+          <div className="flex-1 min-w-[200px]">
+            <input
+              type="text"
+              placeholder="Custom Text"
+              className="w-full p-2 border border-gray-300 rounded-lg"
+            />
+          </div>
+
+          <div className="flex-1 min-w-[200px] flex items-center gap-2">
+            <span className="text-sm whitespace-nowrap">Speed</span>
+            <input
+              type="range"
+              min="1"
+              max="5"
+              step="1"
+              value={playbackRates[0] || 1}
+              onChange={(e) => handleSpeedChange(0, Number(e.target.value))}
+              className="w-full"
+            />
+            <span className="text-sm whitespace-nowrap">
+              {playbackRates[0] || 1}x
+            </span>
+          </div>
+        </div>
+
+        {/* Dropdown Filters */}
+        <div className="flex flex-wrap gap-4 mt-4 w-1/2">
+          <select className="flex-1 p-2 border border-gray-300 rounded-lg">
+            <option>Gender</option>
+          </select>
+          <select className="flex-1 p-2 border border-gray-300 rounded-lg">
+            <option>Language</option>
+          </select>
+          <select className="flex-1 p-2 border border-gray-300 rounded-lg">
+            <option>License</option>
+          </select>
+        </div>
+
+        {/* AI Voice Cards */}
+        <div className="grid md:grid-cols-3 gap-6 mt-6">
+          {filteredAgents?.map((agent, ind) => (
+            <div key={agent} className="bg-white p-4 rounded-lg shadow-md">
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-light">Agent {agent}</h3>
+                <span className="border text-xs px-2 py-1 rounded-full">
+                  English
+                </span>
+              </div>
+              <p className=" text-xs my-3">
+                The quick brown fox jumps over the lazy dog
               </p>
+
+              {/* Audio Player Placeholder */}
+             
+              <WavePlayer
+                audio="/assets/eCommerce.wav"
+                playbackRate={playbackRates[ind] || 1}
+                index={ind}
+                currentPlayingIndex={currentPlayingIndex}
+                setCurrentPlayingIndex={setCurrentPlayingIndex}
+              />
+              {/* Speed Controls */}
+              <div className="flex gap-2 items-center mt-3">
+                <span className="text-sm font-semibold">Speed</span>
+                <div className="flex gap-2">
+                  {["1x", "2x", "3x", "4x", "5x"].map((speed, i) => {
+                    const value = i + 1;
+                    const isActive = (playbackRates[ind] || 1) === value;
+
+                    return (
+                      <button
+                        key={speed}
+                        onClick={() => handleSpeedChange(ind, value)}
+                        className={`text-sm px-2 py-1 rounded-full transition-all duration-150 ${
+                          isActive
+                            ? "bg-[#00a7e6] text-white"
+                            : "bg-gray-200 text-gray-800"
+                        }`}
+                      >
+                        {speed}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           ))}
         </div>
-        <CommonButton title="Create your AI agent in 30 seconds" className="mt-12 bg-[#00a7e6] text-white font-light py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg" route={"https://cal.com/team/tinycheque/qcall"}/>
       </div>
     </div>
   );
-};
-
-export default QCallHeroSection;
-
-
-make this design 
-
+}

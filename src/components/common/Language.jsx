@@ -48,7 +48,7 @@ export default function Language({ img, route }) {
               <CommonButton
                 title="Explore More Voices"
                 className="bg-[#00a7e6] rounded-full text-white text-sm transition"
-                route="http://localhost:3000/explore-ai-voice"
+                route="/explore-ai-voice"
               />
             </div>
           </div>
