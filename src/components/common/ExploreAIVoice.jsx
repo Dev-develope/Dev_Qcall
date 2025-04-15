@@ -7,15 +7,20 @@ import { useState } from "react";
 import { Search } from "lucide-react";
 
 export default function ExploreAIVoice() {
-  const [playbackRate, setPlaybackRate] = useState(1);
+  const [playbackRates, setPlaybackRates] = useState({});
   const [currentPlayingIndex, setCurrentPlayingIndex] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [globalSpeed, setGlobalSpeed] = useState(1);   // for indivisual plyer speed controller
 
   const agents = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
   const filteredAgents = agents.filter((agent) =>
-    `Agent ${agent}`.toLowerCase().includes(searchQuery.toLowerCase())
+    `Agent${agent}`.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const handleSpeedChange = (index, rate) => {
+    setPlaybackRates((prev) => ({ ...prev, [index]: rate }));
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-6 mt-10">
@@ -27,7 +32,7 @@ export default function ExploreAIVoice() {
 
         {/* Search & Filters */}
         <div className="flex flex-wrap items-center gap-3 bg-white p-4 rounded-lg shadow-md">
-        <div className="flex-1 min-w-[200px] relative">
+          <div className="flex-1 min-w-[200px] relative">
             <input
               type="text"
               placeholder="Search"
@@ -60,11 +65,17 @@ export default function ExploreAIVoice() {
               min="1"
               max="5"
               step="1"
-              value={playbackRate}
-              onChange={(e) => setPlaybackRate(Number(e.target.value))}
+              value={globalSpeed}
+              onChange={(e) => {
+                const value = Number(e.target.value);
+                setGlobalSpeed(value);
+                if (currentPlayingIndex !== null) {
+                  handleSpeedChange(currentPlayingIndex, value);
+                }
+              }}
               className="w-full"
             />
-            <span className="text-sm whitespace-nowrap">{playbackRate}x</span>
+            <span className="text-sm whitespace-nowrap">{globalSpeed}x</span>
           </div>
         </div>
 
@@ -83,7 +94,7 @@ export default function ExploreAIVoice() {
 
         {/* AI Voice Cards */}
         <div className="grid md:grid-cols-3 gap-6 mt-6">
-          {filteredAgents?.map((agent,ind) => (
+          {filteredAgents?.map((agent, ind) => (
             <div key={agent} className="bg-white p-4 rounded-lg shadow-md">
               <div className="flex justify-between items-center">
                 <h3 className="text-lg font-light">Agent {agent}</h3>
@@ -96,16 +107,10 @@ export default function ExploreAIVoice() {
               </p>
 
               {/* Audio Player Placeholder */}
-              {/* <Image
-                                src={audioPlayer}
-                                alt="Audio Player"
-                                width={350}
-                                height={50}
-                                className="mb-2"
-                            /> */}
+
               <WavePlayer
                 audio="/assets/eCommerce.wav"
-                playbackRate={playbackRate}
+                playbackRate={playbackRates[ind] || 1}
                 index={ind}
                 currentPlayingIndex={currentPlayingIndex}
                 setCurrentPlayingIndex={setCurrentPlayingIndex}
@@ -114,17 +119,28 @@ export default function ExploreAIVoice() {
               <div className="flex gap-2 items-center mt-3">
                 <span className="text-sm font-semibold">Speed</span>
                 <div className="flex gap-2">
-                  {["1x", "2x", "3x", "4x", "5x"].map((speed, index) => (
-                    <button
-                      onClick={() => {
-                        setPlaybackRate(index + 1);
-                      }}
-                      key={speed}
-                      className="text-sm px-2 py-1 bg-gray-200 rounded-full"
-                    >
-                      {speed}
-                    </button>
-                  ))}
+                  {["1x", "2x", "3x", "4x", "5x"].map((speed, i) => {
+                    const value = i + 1;
+                    const isActive = (playbackRates[ind] || 1) === value;
+
+                    return (
+                      <button
+                        key={speed}
+                        onClick={() => {
+                          handleSpeedChange(ind, value);
+                          setCurrentPlayingIndex(ind);
+                          setGlobalSpeed(value);
+                        }}                        
+                        className={`text-sm px-2 py-1 rounded-full transition-all duration-150 ${
+                          isActive
+                            ? "bg-[#00a7e6] text-white"
+                            : "bg-gray-200 text-gray-800"
+                        }`}
+                      >
+                        {speed}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             </div>
