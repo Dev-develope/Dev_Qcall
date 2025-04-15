@@ -41,7 +41,7 @@ export default function CardItem2() {
         {cardData2?.map((ele, index) => (
           <div
             key={index}
-            className="border border-gray-300 rounded-3xl p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="border border-[#00a7e6] rounded-3xl p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="mb-2 text-white rounded-full flex justify-center item-center">
               <Image src={ele.icon} alt="LOGO" className="h-12 w-12"/>
@@ -52,11 +52,11 @@ export default function CardItem2() {
         ))}
       </div>
 
-        <div className="grid md:grid-cols-2 gap-6 w-full max-w-2xl px-4 mt-5">
+        <div className="grid md:grid-cols-2 gap-6 w-full max-w-xl px-4 mt-5">
           {staticCardData.map((card, index) => (
             <div
               key={index}
-              className="border border-gray-300 rounded-3xl p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className="border border-[#00a7e6] rounded-3xl p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               <div className="mb-2 text-white rounded-full flex justify-center item-center">
                 <Image src={card.icon} alt="LOGO" className="h-12 w-12"/>
