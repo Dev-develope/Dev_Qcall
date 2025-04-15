@@ -68,8 +68,8 @@ const PricingTable = () => {
                         }`}
                       />
                     </div>
-                    <span className={`text-sm ${!isAnnual ? "text-black font-medium" : "text-gray-500"}`}>
-                      Monthly
+                    <span className={`text-sm ${!isAnnual ? "text-gray-500 font-medium" : "text-gray-500 font-medium"}`}>
+                      {!isAnnual?"Monthly":"Yearly"}
                     </span>
                   </label>
 
@@ -81,8 +81,8 @@ const PricingTable = () => {
                       onChange={() => setIsAnnual(true)}
                       className="sr-only peer"
                     />
-                    <span className={`text-sm ${isAnnual ? "text-black font-medium" : "text-gray-500"}`}>
-                      Annually <span className="text-xs text-[#00a7e6]">(Save 40%)</span>
+                    <span className={`text-sm ${isAnnual ? "text-gray-500 font-medium" : "text-gray-500 font-medium"}`}>
+                    {!isAnnual?"Monthly":"Yearly"} <span className="text-xs text-[#00a7e6]">(Save 40%)</span>
                     </span>
                   </label>
                 </div>
