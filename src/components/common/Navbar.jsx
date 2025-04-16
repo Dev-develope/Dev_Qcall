@@ -177,6 +177,7 @@ export default function Navbar({ className }) {
               className={`lg:text-sm md:text-xs font-bold px-4 py-2 w-1/2 rounded-xl ${
                 scrolled ? "text-black bg-[#00a7e6]" : "text-white bg-[#00a7e6]"
               }`}
+             
               title="Sign up"
               route="https://app.qcall.ai/auth/sign-up"
             >
@@ -281,13 +282,13 @@ export default function Navbar({ className }) {
 
               {item.hasChildren && (
                 <div
-                  className={`transition-all duration-400 overflow-hidden ${
+                  className={`transition-all duration-400 ${
                     openSubMenu === item.id
                       ? "max-h-96 opacity-100"
                       : "max-h-0 opacity-0"
                   }`}
                 >
-                  <ul className="bg-[#121212] text-white py-2 border-t border-gray-700">
+                  <ul className="bg-[#121212] text-white py-2 border-t border-gray-700 overflow-y-auto">
                     {item.subMenu.map((sub) => {
                       const isActive = pathname === sub.url;
 
