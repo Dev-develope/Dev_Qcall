@@ -81,7 +81,7 @@ export default function Navbar({ className }) {
               <li key={item.id} className="relative group">
                 <Link
                   href={item.url}
-                  className={`hover:text-[#00a7e6] text-sm flex items-center space-x-1 ${
+                  className={`hover:text-[#00a7e6] text-sm font-bold flex items-center space-x-1 ${
                     scrolled ? "text-white" : "text-white"
                   }`}
                 >
