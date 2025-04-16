@@ -125,8 +125,8 @@ export default function Navbar({ className }) {
                               </p>
                             </div>
                           </div>
-                          <div className="p-1 rounded-full border border-gray-500">
-                            <ChevronRight />
+                          <div className="p-1 rounded-full border border-gray-500 hover:bg-[#00a7e6]">
+                          <ChevronRight className="text-white  transition-colors duration-200" />
                           </div>
                         </Link>
                       ))}
