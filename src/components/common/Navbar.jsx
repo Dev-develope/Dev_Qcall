@@ -18,6 +18,7 @@ import CommonButton from "./Button";
 import { menuItems } from "src/constants/naviation";
 import Image from "next/image";
 import logo from "../../../public/images/QcallLogo.png";
+import logo2 from "../../../public/images/qcallaidarklogo2.png";
 import { usePathname } from "next/navigation";
 
 export default function Navbar({ className }) {
@@ -59,16 +60,21 @@ export default function Navbar({ className }) {
     <nav
       className={`${className} fixed top-0 left-0 w-[100dvw] max-w-full z-[9999] py-2 transition-all duration-300 ${
         scrolled
-          ? "bg-gradient-to-r from-[#0b0c1e] via-[#0e0f2a] to-[#101236] text-white shadow-md"
+          ? "bg-white shadow-2xl"
           : " text-white"
       }`}
+      // className={`${className} fixed top-0 left-0 w-[100dvw] max-w-full z-[9999] py-2 transition-all duration-300 ${
+      //   scrolled
+      //     ? "bg-gradient-to-r from-[#0b0c1e] via-[#0e0f2a] to-[#101236] text-white shadow-md"
+      //     : " text-white"
+      // }`}
     >
       <div className="container lg:mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center lg:w-1/2 md:w-full justify-around space-x-8">
           <Link href="/">
             <Image
-              src={logo}
+              src={scrolled?logo2:logo}
               alt="logo"
               height={30}
               width={100}
@@ -82,7 +88,7 @@ export default function Navbar({ className }) {
                 <Link
                   href={item.url}
                   className={`hover:text-[#00a7e6] text-sm font-bold flex items-center space-x-1 ${
-                    scrolled ? "text-white" : "text-white"
+                    scrolled ? "text-black" : "text-white"
                   }`}
                 >
                   <span>{item.text}</span>
