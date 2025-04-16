@@ -20,7 +20,7 @@ export default function Exploring() {
 
                         <div className="mt-6 flex flex-wrap justify-center gap-3 sm:gap-4">
                             <CommonButton className="bg-[#00a7e6] text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-2 sm:py-3 shadow-lg" title="Try it now for free!!!" route={"https://app.qcall.ai/auth/sign-up"}/>
-                            <CommonButton className="bg-white  text-black text-xs sm:text-sm font-bold px-4 sm:px-6 py-2 sm:py-3 shadow-lg" title="Book a demo" route={"https://cal.com/team/tinycheque/qcall"}/>
+                            <CommonButton className="bg-white  text-black hover:text-[#00a7e6] text-xs sm:text-sm font-bold px-4 sm:px-6 py-2 sm:py-3 shadow-lg" title="Book a demo" route={"https://cal.com/team/tinycheque/qcall"}/>
                         </div>
                     </div>
                 </div>
