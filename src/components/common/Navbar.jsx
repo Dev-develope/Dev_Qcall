@@ -177,7 +177,6 @@ export default function Navbar({ className }) {
               className={`lg:text-sm md:text-xs font-bold px-4 py-2 w-1/2 rounded-xl ${
                 scrolled ? "text-black bg-[#00a7e6]" : "text-white bg-[#00a7e6]"
               }`}
-             
               title="Sign up"
               route="https://app.qcall.ai/auth/sign-up"
             >
@@ -240,11 +239,24 @@ export default function Navbar({ className }) {
                   />
                 )}
               </button> */}
-              <button
+              {/* <button
                 className={`w-full text-md font-bold py-3 flex justify-between items-center transition-colors duration-200${
                  openSubMenu === item.id
                 ? "text-[#00a7e6]"
                 : "text-white hover:text-[#00a7e6]"}`}
+                onClick={() => item.hasChildren && toggleSubMenu(item.id)}
+              >
+                {item.text}
+                {item.hasChildren && (
+                  <ChevronRight
+                    className={`transition-transform duration-300 ${
+                      openSubMenu === item.id ? "rotate-90" : "rotate-0"
+                    }`}
+                  />
+                )}
+              </button> */}
+              <button
+                className={`w-full text-md font-bold py-3 flex justify-between items-center transition-colors duration-200 ${openSubMenu === item.id? "text-[#00a7e6]": "text-white hover:text-[#00a7e6]"}`}
                 onClick={() => item.hasChildren && toggleSubMenu(item.id)}
               >
                 {item.text}
