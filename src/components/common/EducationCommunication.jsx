@@ -80,7 +80,10 @@ export default function EducationCommunication() {
 
       {/* Call to Action */}
       <p className="text-gray-400 mt-10">QCallAI – Shaping the Future of Education, One Conversation at a Time!</p>
+      
+      <div className="flex justify-center items-center">
       <CommonButton title="Let's connect today!" className="mt-6 bg-[#00a7e6] text-white px-6 py-2 rounded-full text-sm" route={"https://cal.com/team/tinycheque/qcall"}/>
+      </div>
     </section>
   );
 }

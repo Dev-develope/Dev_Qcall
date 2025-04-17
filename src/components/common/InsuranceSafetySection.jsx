@@ -27,7 +27,9 @@ const InsuranceSafetySection = ({ data }) => {
                 <p className="text-gray-200 text-sm md:text-base mb-6">
                     {data.description}
                 </p>
-                <CommonButton title={data.buttonText} className="bg-[#00a7e6] font-medium py-2 px-6 rounded-full text-sm shadow-lg" route={"https://cal.com/team/tinycheque/qcall"}/>
+               <div className='flex justify-center items-center'>
+               <CommonButton title={data.buttonText} className="bg-[#00a7e6] font-medium py-2 px-6 rounded-full text-sm shadow-lg" route={"https://cal.com/team/tinycheque/qcall"}/>
+               </div>
             </div>
         </div>
     );

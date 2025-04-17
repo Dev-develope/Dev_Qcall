@@ -3,8 +3,6 @@ import CommonButton from "./Button";
 import Image from "next/image";
 
 export default function SecurityCompliance({ securityData }) {
-
-
   return (
     <section className="py-16 px-4 max-w-6xl mx-auto text-center">
       <span className="px-4 py-1 text-xs border border-[#00a7e6] rounded-full">
@@ -28,17 +26,24 @@ export default function SecurityCompliance({ securityData }) {
                 <Image src={item?.icon} alt="logo" />
               </div>
               <div className="text-left">
-                <h3 className="text-lg font-light text-gray-900">{item?.title}</h3>
-                <p className="text-gray-600 mt-1 text-sm">{item?.description}</p>
+                <h3 className="text-lg font-light text-gray-900">
+                  {item?.title}
+                </h3>
+                <p className="text-gray-600 mt-1 text-sm">
+                  {item?.description}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <CommonButton
-        title="Try it now for free!!!"
-        className="bg-[#00a7e6] text-white mt-10"
-        route={"https://cal.com/team/tinycheque/qcall"}/>
+      <div className="flex justify-center items-center">
+        <CommonButton
+          title="Try it now for free!!!"
+          className="bg-[#00a7e6] text-white mt-10"
+          route={"https://cal.com/team/tinycheque/qcall"}
+        />
+      </div>
     </section>
   );
 }
