@@ -101,29 +101,24 @@ export default function Navbar({ className }) {
                 {item.hasChildren && (
                   // <div className="absolute left-0 bg-[#11121c] min-w-4xl text-white rounded-2xl shadow-lg p-4 hidden group-hover:flex flex-col">
                   <div
-                    className="absolute left-0 bg-[#11121c] min-w-4xl text-white rounded-2xl shadow-lg p-4 
-               opacity-0 scale-95 pointer-events-none 
-               group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto 
-               transition-all duration-500 ease-in-out flex-col"
+                    className="absolute left-0 bg-[#11121c] min-w-3xl text-white rounded-2xl shadow-lg p-4 
+                     opacity-0 scale-95 pointer-events-none 
+                      group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto 
+                     transition-all duration-500 ease-in-out flex-col"
                   >
                     <h3 className="text-sm text-gray-400 mb-3">
                       AI Product Offer by QCall.ai
                     </h3>
 
                     {/* Grid Layout for Submenu */}
-                    <div className="grid grid-cols-3 gap-1">
+                    <div className="flex flex-wrap gap-2">
                       {item.subMenu.map((sub, index) => (
                         <Link
                           href={sub.url}
                           key={index}
                           className="flex items-center justify-between border rounded-2xl w-60 p-5 bg-[#171825] pl-2 pr-2 hover:bg-gray-800"
                         >
-                          <div className="flex items-center space-x-3  rounded-2xl transition">
-                            {/* {index % 4 === 0 && <LayoutGrid size={20} />}
-                            {index % 4 === 1 && <Settings size={20} />}
-                            {index % 4 === 2 && <Database size={20} />}
-                            {index % 4 === 3 && <Code size={20} />} */}
-
+                          <div className="flex items-center space-x-3 rounded-2xl transition">
                             <div>
                               <p className="text-sm">{sub.text}</p>
                               <p className="text-xs text-gray-400">
@@ -144,40 +139,7 @@ export default function Navbar({ className }) {
           </ul>
         </div>
 
-        {/* <div className="hidden md:flex items-center space-x-4 mr-5">
-          <CommonButton
-            className={`lg:text-sm md:text-xs font-light px-4 py-2 rounded-full ${
-              scrolled ? "text-black bg-[#00a7e6]" : "text-white bg-[#00a7e6]"
-            }`}
-            title="Sign up"
-            route="https://app.precallai.com/auth/sign-up"
-          />
-          <CommonButton
-            className={`lg:text-sm md:text-xs font-light px-4 py-2 rounded-full ${
-              scrolled ? "text-white bg-black" : "text-black bg-white"
-            }`}
-            title="Log in"
-            route="https://app.precallai.com/auth/sign-in"
-          />
-        </div> */}
-
         {!isMobile && (
-          // <div className="flex items-center space-x-4 mr-5 w-[15rem]">
-          //   <CommonButton
-          //     className={`lg:text-sm md:text-xs font-bold px-4 py-2 w-1/2 rounded-xl ${
-          //       scrolled ? "text-black bg-[#00a7e6]" : "text-white bg-[#00a7e6]"
-          //     }`}
-          //     title="Sign up"
-          //     route="https://app.qcall.ai/auth/sign-up"
-          //   />
-          //   <CommonButton
-          //     className={`lg:text-sm md:text-xs font-bold px-4 py-2 w-1/2 rounded-xl ${
-          //       scrolled ? "text-black bg-[#00a7e6]" : "text-white bg-[#00a7e6]"
-          //     }`}
-          //     title="Log in"
-          //     route="https://app.qcall.ai/auth/sign-in"
-          //   />
-          // </div>
           <div className="flex items-center space-x-4 mr-5 w-[15rem]">
             <CommonButton
               className={`lg:text-sm md:text-xs font-bold px-4 py-2 w-1/2 rounded-xl ${
@@ -232,35 +194,6 @@ export default function Navbar({ className }) {
         <div className="flex flex-col py-6 px-5 space-y-4">
           {menuItems.map((item) => (
             <div key={item.id} className="w-full text-left">
-              {/* <button
-                className="w-full text-white text-md font-bold py-3 hover:text-[#00a7e6] flex justify-between items-center"
-                onClick={() => item.hasChildren && toggleSubMenu(item.id)}
-              >
-                {item.text}
-                {item.hasChildren && (
-                  <ChevronRight
-                    className={`transition-transform duration-300 ${
-                      openSubMenu === item.id ? "rotate-90" : "rotate-0"
-                    }`}
-                  />
-                )}
-              </button> */}
-              {/* <button
-                className={`w-full text-md font-bold py-3 flex justify-between items-center transition-colors duration-200${
-                 openSubMenu === item.id
-                ? "text-[#00a7e6]"
-                : "text-white hover:text-[#00a7e6]"}`}
-                onClick={() => item.hasChildren && toggleSubMenu(item.id)}
-              >
-                {item.text}
-                {item.hasChildren && (
-                  <ChevronRight
-                    className={`transition-transform duration-300 ${
-                      openSubMenu === item.id ? "rotate-90" : "rotate-0"
-                    }`}
-                  />
-                )}
-              </button> */}
               <button
                 className={`w-full text-md font-bold py-3 flex justify-between items-center transition-colors duration-200 ${openSubMenu === item.id? "text-[#00a7e6]": "text-white hover:text-[#00a7e6]"}`}
                 onClick={() => item.hasChildren && toggleSubMenu(item.id)}
@@ -275,29 +208,6 @@ export default function Navbar({ className }) {
                 )}
               </button>
 
-              {/* {item.hasChildren && (
-                <div
-                  className={`transition-all duration-400 overflow-hidden ${
-                    openSubMenu === item.id
-                      ? "max-h-96 opacity-100"
-                      : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <ul className="bg-[#121212] text-white py-2 border-t border-gray-700">
-                    {item.subMenu.map((sub) => (
-                      <li key={sub.url} className="py-2 px-4">
-                        <Link
-                          href={sub.url}
-                          className="hover:text-[#00a7e6] block"
-                        >
-                          {sub.text}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )} */}
-
               {item.hasChildren && (
                 <div
                   className={`transition-all duration-400 ${
@@ -308,7 +218,7 @@ export default function Navbar({ className }) {
                 >
                   <ul className="bg-[#121212] text-white py-2 border-t border-gray-700 overflow-y-auto">
                     {item.subMenu.map((sub) => {
-                      const isActive = pathname === sub.url;
+                      const isActive = pathname === sub.url
 
                       return (
                         <li

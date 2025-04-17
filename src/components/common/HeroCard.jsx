@@ -34,43 +34,45 @@ const HeroCard = ({ herocardData, className, sampleData }) => {
             )}
           </div>
           {!sampleData ? (
-            <div className={`${className} grid md:grid-cols-3 gap-4 p-4`}>
-              {herocardData[0]?.cards?.map((card, index) => (
-                <div
-                  key={index}
-                  className="bg-purple-50 border border-[#00a7e6] rounded-lg p-6 h-full"
-                >
-                  {card.extraText && (
-                    <p className="text-xs mb-2">{card.extraText}</p>
-                  )}
-                  <h2 className="text-lg font-semibold mb-1">{card.title}</h2>
-                  {card?.paraHeading && (
-                    <p className="font-light text-sm mt-4 mb-4">
-                      {card.paraHeading}
+            <div className="p-8">
+              <div className={`${className} grid md:grid-cols-3 gap-4`}>
+                {herocardData[0]?.cards?.map((card, index) => (
+                  <div
+                    key={index}
+                    className="bg-purple-50 border border-[#00a7e6] rounded-lg p-6 h-full"
+                  >
+                    {card.extraText && (
+                      <p className="text-xs mb-2">{card.extraText}</p>
+                    )}
+                    <h2 className="text-lg font-semibold mb-1">{card.title}</h2>
+                    {card?.paraHeading && (
+                      <p className="font-light text-sm mt-4 mb-4">
+                        {card.paraHeading}
+                      </p>
+                    )}
+                    <p className="text-gray-600 text-sm mb-2">
+                      {card.description}
                     </p>
-                  )}
-                  <p className="text-gray-600 text-sm mb-2">
-                    {card.description}
-                  </p>
-                  {card?.list && (
-                    <ul className="list-inside text-gray-600 text-sm mt-5">
-                      {card?.list?.map((item, i) => (
-                        <>
-                          <div className="flex gap-2">
-                            <div className="text-xs text-[#00a7e6]">✦</div>
-                            <div>
-                              <li key={i} className="mb-1">
-                                {item}
-                              </li>
+                    {card?.list && (
+                      <ul className="list-inside text-gray-600 text-sm mt-5">
+                        {card?.list?.map((item, i) => (
+                          <>
+                            <div className="flex gap-2">
+                              <div className="text-xs text-[#00a7e6]">✦</div>
+                              <div>
+                                <li key={i} className="mb-1">
+                                  {item}
+                                </li>
+                              </div>
                             </div>
-                          </div>
-                        </>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-                // </div>
-              ))}
+                          </>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  // </div>
+                ))}
+              </div>
             </div>
           ) : (
             <HeroTable data={sampleData} />
