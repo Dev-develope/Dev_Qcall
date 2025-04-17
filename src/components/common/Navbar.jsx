@@ -205,7 +205,7 @@ export default function Navbar({ className }) {
           <div className=" mr-3">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-white"
+              className={scrolled?`text-black`:`text-white`}
             >
               {menuOpen ? <X size={24} /> : <Menu size={30} />}
             </button>
