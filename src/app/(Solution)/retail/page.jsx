@@ -21,7 +21,7 @@ import record from "../../../../public/images/qcallAi/3Solution-Retail Networks/
 export default function page() {
     return (<>
         <Hero data={retailHeroData[0]} herocardData={retailHerocardData}>
-            <SingleButton title="Get a Demo Today!!" />
+            <SingleButton title="Get a Demo Today!!" route={"https://cal.com/team/tinycheque/qcall"}/>
         </Hero>
         <LogoSlider />
         <InsuranceSafetySection data={reatilSafety[0]} />
@@ -34,7 +34,7 @@ export default function page() {
         <CommonCardB cardDatas={retailDataF} img={streamlin}/>
         <CommonCard cardDatas={retailDataG} img={secureImg}/>
         <div className="flex justify-center items-center mt-1 mb-10">
-            <CommonButton className="bg-[#00a7e6] font-light text-white" title="try it now for free!!!" />
+            <CommonButton className="bg-[#00a7e6] font-light text-white" title="try it now for free!!!" route={"https://app.qcall.ai/auth/sign-up"}/>
         </div>
         <RetailFeatures data={retailFeaturesData} />
         

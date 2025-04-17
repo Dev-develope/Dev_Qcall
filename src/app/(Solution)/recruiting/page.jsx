@@ -16,7 +16,7 @@ import { legalFeaturesData, legalHerocardData, legalHeroData, reatilSafety, recr
 export default function page() {
     return (<>
         <Hero data={recruitingHeroData[0]} herocardData={recruiterHerocardData} className="text-center">
-            <SingleButton title="Get a Demo Today!" className="bg-[#00a7e6]" />
+            <SingleButton title="Get a Demo Today!" className="bg-[#00a7e6]" route={"https://cal.com/team/tinycheque/qcall"}/>
         </Hero>
         <LogoSlider />
         <InsuranceSafetySection data={reatilSafety[0]} />

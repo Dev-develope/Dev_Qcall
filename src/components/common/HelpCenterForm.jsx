@@ -2,10 +2,11 @@ import CommonButton from "./Button";
 
 export default function HelpCenterForm() {
     return (<>
-        <div className="h-[28rem] w-full sm:w-4/5 md:w-3/5 lg:w-2/3 flex flex-col justify-center items-center bg-white rounded-2xl shadow-lg p-10 ">
-            <p className="px-4 py-2 rounded-full inline-block text-xs mb-4 border border-gray-400">
+        <div className="h-[35rem] w-full sm:w-4/5 md:w-3/5 lg:w-2/3 flex flex-col justify-center items-center bg-white rounded-2xl shadow-lg p-10 ">
+            <p className="px-4 py-2 rounded-full inline-block text-xs border border-gray-400">
                 {"Get in Touch"}
             </p>
+            <h1 className="text-3xl mt-2 mb-5">Send Us Messages</h1>
             <form class="w-full mx-auto">
                 <div className="flex flex-row gap-5">
                     <div class="mb-5 w-1/2">
@@ -24,9 +25,9 @@ export default function HelpCenterForm() {
                         <input type="text" id="text" class="shadow-xs border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" placeholder="WebSite URL" required />
                     </div>
                     <div class="mb-5 w-1/2">
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone Number
+                        <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone Number
                         </label>
-                        <input type="number" id="email" class="shadow-xs border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" required />
+                        <input type="number" id="text" class="shadow-xs border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" placeholder="Phone" required />
                     </div>
                 </div>
                 <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>

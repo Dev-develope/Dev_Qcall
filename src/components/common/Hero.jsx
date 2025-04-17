@@ -53,7 +53,7 @@ function Hero({ data, children, herocardData, className, videoPath, sampleData }
 
                 {/* Content */}
                 <Navbar />
-                <div className="relative  container mx-auto text-white text-center tracking-[1px] flex flex-col justify-center items-center min-h-[40rem]">
+                <div className="relative  container mx-auto text-white text-center tracking-[1px] flex flex-col justify-center items-center min-h-[40rem] px-4">
                     <p className="px-4 py-2 rounded-full inline-block text-xs mb-4 border border-gray-400">
                         {data?.heading}
                     </p>

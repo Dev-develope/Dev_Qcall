@@ -45,7 +45,7 @@ export default function AiFeatures() {
         {tabs.map((tab) => (
           <button
             key={tab.id}
-            className={`px-4 py-2 rounded-full transition-all duration-300 text-sm font-medium ${activeTab === tab.id
+            className={`px-4 py-2 rounded-full transition-all duration-300 text-sm font-bold ${activeTab === tab.id
               ? "bg-[#00a7e6] text-white shadow-md"
               : "text-gray-700 hover:bg-gray-100"
               }`}

@@ -70,7 +70,7 @@ export default function FutureInnovationPage() {
       </div>
 
       <div className='flex justify-center items-center'>
-        <CommonButton title="Try it now for free!!!" className="bg-[#00a7e6] text-white" />
+        <CommonButton title="Try it now for free!!!" className="bg-[#00a7e6] text-white" route={"https://cal.com/team/tinycheque/qcall"}/>
       </div>
     </div>
   );

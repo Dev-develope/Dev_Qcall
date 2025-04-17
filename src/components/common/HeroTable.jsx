@@ -24,9 +24,11 @@ const HeroTable = ({ data }) => {
                 <tr key={index} className="bg-white">
                   {Object.values(row).map((value, idx) => (
                     <td
-                      key={idx}
-                      className="px-4 py-2 text-gray-600 text-left text-xs mt-5"
-                    >
+                    key={idx}
+                    className={`px-4 py-2 text-left text-xs mt-5 text-gray-600 ${
+                      idx === 0 ? 'font-semibold text-gray-800' : ''
+                    }`}
+                  >
                       <div className="flex">
                         <div>
                           {(idx === 1 || idx === 2) && (

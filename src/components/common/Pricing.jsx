@@ -13,8 +13,9 @@ export default function Pricing({ pricingPlans, video, img = circleGIf }) {
                     src={img}
                     alt="Upgrade Background"
                     layout="fill"
-                    objectFit="contain"
+                    // objectFit="cover"
                     priority
+                    className="object-cover sm:object-contain"
                 />
             </div> :
                 <video

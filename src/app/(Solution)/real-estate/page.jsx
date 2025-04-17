@@ -14,7 +14,7 @@ import {clientEngagementData, realEstateHerocardData, realEstateHeroData, realSt
 export default function page() {
     return (<>
         <Hero data={realEstateHeroData[0]} herocardData={realEstateHerocardData} className="text-center">
-            <SingleButton title="Get a Demo Today!" className="bg-[#00a7e6]" />
+            <SingleButton title="Get a Demo Today!" className="bg-[#00a7e6]" route={"https://cal.com/team/tinycheque/qcall"}/>
         </Hero>
         <LogoSlider />
         <InsuranceSafetySection data={reatilSafety[0]} />

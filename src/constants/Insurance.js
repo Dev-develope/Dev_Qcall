@@ -5,7 +5,7 @@ export const InsuranceHeroData = [
         h1: "QCallAI for Insurance – Smarter",
         h2: "Conversations, Stronger Connections",
         para2: "Transform Every Interaction into a Seamless Experience.",
-        para3: " Insurance isn’t just about policies and claims—it’s about trust, clear communication, and timely responses. QCallAI helps insurance professionals simplify customer interactions by combining calls, emails, and messages into one AI-powered workspace."
+        para3: " Insurance isn’t just about policies and claims its about   trust, clear communication, and timely responses. QCallAI helps insurance professionals simplify customer interactions by combining calls, emails, and messages into one AI-powered workspace."
     }
 ];
 

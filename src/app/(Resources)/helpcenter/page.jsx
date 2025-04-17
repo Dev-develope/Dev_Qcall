@@ -6,7 +6,7 @@ import { compareHeroData, comprisionHerocardData} from "src/constants/SolutionDa
 export default function page() {
     return (<>
         <Hero data={compareHeroData[0]} herocardData={comprisionHerocardData} className="text-start">
-            <SingleButton title="Become a Partner" />
+            <SingleButton title="Become a Partner" route={"#"}/>
         </Hero>
     </>)
 }

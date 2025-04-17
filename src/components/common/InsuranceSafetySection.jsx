@@ -18,7 +18,7 @@ const InsuranceSafetySection = ({ data }) => {
 
             {/* Content */}
             <div className="relative  max-w-2xl px-6">
-                <div className="inline-block border border-green-300 px-3 py-1 rounded-full text-xs font-light mb-4">
+                <div className="inline-block border border-[#00a7e6] px-3 py-1 rounded-full text-xs font-light mb-4">
                     {data.label}
                 </div>
                 <h1 className="text-3xl md:text-4xl font-light mb-4">
@@ -27,7 +27,9 @@ const InsuranceSafetySection = ({ data }) => {
                 <p className="text-gray-200 text-sm md:text-base mb-6">
                     {data.description}
                 </p>
-                <CommonButton title={data.buttonText} className="bg-[#00a7e6] font-medium py-2 px-6 rounded-full text-sm shadow-lg" route={"https://cal.com/team/tinycheque/qcall"}/>
+               <div className='flex justify-center items-center'>
+               <CommonButton title={data.buttonText} className="bg-[#00a7e6] font-medium py-2 px-6 rounded-full text-sm shadow-lg" route={"https://cal.com/team/tinycheque/qcall"}/>
+               </div>
             </div>
         </div>
     );

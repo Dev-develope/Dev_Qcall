@@ -51,7 +51,7 @@ export default function LogoSlider({ avetar }) {
                 <Partners />
             </div>
             <div className="w-full flex flex-col items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24 py-5">
-                <div className="max-w-3xl text-center">
+                <div className="max-w-3xl">
                     <p className="text-4xl font-medium text-gray-900">
                         <span className="text-gray-400 text-3xl">“</span>
                         {testimonials[current].quote.split(/(quick|personalised|more|effectively)/g).map((word, i) => (
@@ -71,7 +71,7 @@ export default function LogoSlider({ avetar }) {
                     </p>
                 </div>
 
-                <div className='flex justify-around w-full mt-5 container mx-auto'>
+                <div className='flex justify-between max-w-3xl mt-5 container mx-auto'>
                     <div className="mt-6 flex gap-4">
                         <Image
                             src={testimonials[current].image}

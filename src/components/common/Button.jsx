@@ -1,6 +1,8 @@
 "use client";
+import { usePathname } from "next/navigation";
 
-export default function CommonButton({ onClick, className, title, route }) {
+export default function CommonButton({ onClick, className, title, route, children }) {
+  const path = usePathname();
   const handleClick = () => {
     if (route) {
       window.open(route, "_blank");
@@ -11,10 +13,11 @@ export default function CommonButton({ onClick, className, title, route }) {
 
   return (
     <button
-      className={`${className} px-4 py-2 rounded-full cursor-pointer`}
+      className={`${className} hover:bg-[#1f1f1f] hover:text-[#00a7e6]  px-4 py-2 rounded-full cursor-pointer flex items-center justify-center gap-2`}
       onClick={handleClick}
     >
-      {title}
+      <span>{title}</span>
+      {children}
     </button>
   );
 }

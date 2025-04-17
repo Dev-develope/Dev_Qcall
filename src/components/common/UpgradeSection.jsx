@@ -30,7 +30,7 @@ export default function UpgradeSection({img}) {
                 {/* Buttons */}
                 <div className="mt-6 flex flex-col sm:flex-row gap-4">
                     <CommonButton title="Start for Free" className=" text-white bg-[#00a7e6] " route="https://app.precallai.com/auth/sign-up"/>
-                    <CommonButton title="Book a Demo" className='bg-white text-black' route={"https://cal.com/team/tinycheque/qcall"}/>
+                    <CommonButton title="Book a Demo" className='bg-white text-black hover:text-[#00a7e6]' route={"https://cal.com/team/tinycheque/qcall"}/>
                 </div>
             </div>
         </div>

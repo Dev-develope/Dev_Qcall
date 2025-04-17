@@ -317,9 +317,14 @@ export const menuItems = [
         sortDec: "Automate Appointment Reminder & follow Ups"
       },
       {
-        text: "Legal",
+        text: "Legal-Profesional",
         url: "/legal-profesional",
         sortDec: "Improve Client Communication & meeting reminder"
+      },
+      {
+        text: "Professional Services",
+        url: "/professional",
+        sortDec: "Improve client communication and meeting reminders"
       },
       {
         text: "Retail",
@@ -445,40 +450,40 @@ export const footerData = {
       title: "Company",
       links: [
         { name: "Home", href: "/" },
-        { name: "About Us", href: "/about" },
-        { name: "Contact Us", href: "/contact" },
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms of Use", href: "/terms" }
+        { name: "About Us", href: "/#" },
+        { name: "Contact Us", href: "/#" },
+        { name: "Privacy Policy", href: "/policy" },
+        { name: "Terms of Use", href: "/termandcondition" }
       ]
     },
     {
       title: "AI Products",
       links: [
-        { name: "AI Contact Center", href: "/products/contact-center" },
-        { name: "AI Sales", href: "/products/sales" },
-        { name: "AI Communication", href: "/products/communication" }
+        { name: "AI Contact Center", href: "/ai-contact-center" },
+        { name: "AI Sales", href: "/ai-sales" },
+        { name: "AI Communication", href: "/ai-communication" }
       ]
     },
     {
       title: "Solutions by Industries",
       links: [
-        { name: "Insurance", href: "/industries/insurance" },
-        { name: "Education", href: "/industries/education" },
-        { name: "Healthcare", href: "/industries/healthcare" },
-        { name: "Real Estate", href: "/industries/real-estate" },
-        { name: "Recruiting", href: "/industries/recruiting" },
-        { name: "Technology", href: "/industries/technology" },
-        { name: "Professional Services", href: "/industries/professional-services" },
-        { name: "Retail", href: "/industries/retail" },
-        { name: "Automotive", href: "/industries/automotive" }
+        { name: "Insurance", href: "/insurance" },
+        { name: "Education", href: "/education" },
+        { name: "Healthcare", href: "/healthcare" },
+        { name: "Real Estate", href: "/real-estate" },
+        { name: "Recruiting", href: "/recruiting" },
+        { name: "Technology", href: "/technology" },
+        { name: "Professional Services", href: "/professional" },
+        { name: "Retail", href: "/retail" },
+        { name: "Automotive", href: "/automate" }
       ]
     },
     {
       title: "Resources",
       links: [
         { name: "Pricing", href: "/pricing" },
-        { name: "Partnership", href: "/partnership" },
-        { name: "Comparison", href: "/comparison" },
+        { name: "Partnership", href: "/partners" },
+        { name: "Comparison", href: "/comparisons" },
         { name: "Enterprise Solution", href: "/enterprise" }
       ]
     }

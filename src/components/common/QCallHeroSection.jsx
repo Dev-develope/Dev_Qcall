@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const QCallHeroSection = ({ videoClip, img }) => {
   return (
-    <div className={`relative w-full overflow-hidden ${img ? "h-[50rem]" : "h-[45rem]"}`}>
+    <div className={`relative w-full overflow-hidden ${img ? "lg:[50rem] sm:h-full" : "h-[45rem]"}`}>
       {img ? <div className="absolute inset-0 w-full h-full ">
         <Image
           src={img}
@@ -29,7 +29,7 @@ const QCallHeroSection = ({ videoClip, img }) => {
 
       <div className="relative flex flex-col items-center justify-center min-h-screen px-4 py-16 text-center">
 
-        <div className="inline-block border px-4 py-2 rounded-full text-sm mb-2 text-white">
+        <div className="inline-block border border-[#00a7e6] px-4 py-2 rounded-full text-sm mb-2 text-white">
           What Achievement At Qcall.ai
         </div>
 
@@ -45,7 +45,7 @@ const QCallHeroSection = ({ videoClip, img }) => {
           {driveMoreRevenueData.map((card, index) => (
             <div
               key={index}
-              className=" border border-gray-300 bg-[#050a18] rounded-3xl p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className=" border border-[#00a7e6] bg-[#050a18] rounded-3xl p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               <span className="text-xs mb-2 block">
                 {card.category}
@@ -59,7 +59,7 @@ const QCallHeroSection = ({ videoClip, img }) => {
             </div>
           ))}
         </div>
-        <CommonButton title="Create your AI agent in 30 seconds" className="mt-12 bg-[#00a7e6] hover:bg-purple-700 text-white font-light py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg" />
+        <CommonButton title="Create your AI agent in 30 seconds" className="mt-12 bg-[#00a7e6] text-white font-light py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg" route={"https://cal.com/team/tinycheque/qcall"}/>
       </div>
     </div>
   );

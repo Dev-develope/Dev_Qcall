@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function RecruitmentLandingPage({ data }) {
   return (
-    <div className="bg-[#0a1328] text-white  flex flex-col items-center py-15">
+    <div className="bg-[#0a1328] text-white  flex flex-col items-center py-15 px-4">
       {/* Badge */}
       {data?.badge && (
         <div className="border border-white px-4 py-1 rounded-full text-xs mb-4">

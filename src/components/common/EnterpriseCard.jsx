@@ -26,7 +26,7 @@ const cardData = [
 
 export default function EnterpriseCard() {
   return (
-    <div className="w-full sm:w-4/5 md:w-3/5 lg:w-2/3 flex flex-col justify-center items-center bg-white rounded-2xl shadow-lg p-10">
+    <div className="w-[50rem] flex flex-col justify-center items-center bg-white rounded-2xl shadow-lg p-10">
       <div className="inline-block border border-gray-300 px-3 py-1 rounded-full text-xs font-light mb-4">
         What Matters At Qcall.ai
       </div>
@@ -34,7 +34,7 @@ export default function EnterpriseCard() {
         Proven Results, Real Impact
       </h1>
       <p className="text-gray-600 mb-6 text-center text-sm max-w-2xl mx-auto">
-        WE'VE EMPOWERED BUSINESSES LIKE YOURS WITH REMARKABLE OUTCOMES
+      WE'VE EMPOWERED BUSINESSES LIKE YOURS WITH REMARKABLE OUTCOMES
       </p>
 
       <div className="w-full rounded-lg p-6">
