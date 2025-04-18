@@ -450,8 +450,8 @@ export const footerData = {
       title: "Company",
       links: [
         { name: "Home", href: "/" },
-        { name: "About Us", href: "https://www.qcall.ai/about" },
-        { name: "Contact Us", href: "https://www.qcall.ai/contact" },
+        { name: "About Us", href: "/aboutus" },
+        { name: "Contact Us", href: "/contact" },
         { name: "Privacy Policy", href: "/policy" },
         { name: "Terms of Use", href: "/termandcondition" }
       ]
