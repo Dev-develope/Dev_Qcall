@@ -18,7 +18,7 @@ export default function CardItem1() {
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 {cardData?.map((ele, index) => (
-                    <div key={index} className="border border-primary rounded-xl p-6 shadow-md">
+                    <div key={index} className="border border-primary rounded-xl p-6 shadow-md card-animate">
                         <h3 className="text-xs text-[#00a7e6] lip-text ">{ele.Heading}</h3>
                         <p className=" font-bold text-4xl text-[#00a7e6]   mt-2">{ele.para1}</p>
                         <p className="text-gray-600 text-sm mt-2">
