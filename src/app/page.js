@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import AiMythsSection from "src/components/common/AiMythSection";
 import CardItem1 from "src/components/common/CardItem1";
 import CardItem2 from "src/components/common/CardItem2";
@@ -32,7 +32,7 @@ import backGroundVideo from "../../public/images/LandingPage/Qcall.ai+video.mp4"
 import pricingImg from "../../public/videos/QCallAiAnimate.gif";
 
 
-export const metadata = {
+ export const metadata = {
   title: "QCall AI - 24/7 AI Agent Calling Platform",
   description:
     "QCall  AI utilizes generative AI to drive its voice-based sales automation tool, streamlining sales processes through AI-powered voice bots. Whether you're a startup or an enterprise, it's designed to facilitate business growth effortlessly.",

@@ -5,9 +5,7 @@ import FutureCard from "src/components/common/FutureCard";
 import Hero from "src/components/common/Hero";
 import InsuranceSafetySection from "src/components/common/InsuranceSafetySection";
 import LogoSlider from "src/components/common/LogoSlider";
-import RealEstateCommunciation from "src/components/common/RealEstateCommunciation";
-import SingleButton from "src/components/common/SingleButton";
-import {educationHerocardData, educationHeroData, eduVertualCommData, eduVertualCommData2, reatilSafety, stuProInstrucCommuData } from "src/constants/SolutionData";
+import {educationHerocardData, educationHeroData, reatilSafety, stuProInstrucCommuData } from "src/constants/SolutionData";
 
 export const metadata = {
     title: "Education | QCall AI Choose What Works Best",

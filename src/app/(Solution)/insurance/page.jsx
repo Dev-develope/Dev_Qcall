@@ -4,7 +4,7 @@ import InsuranceSafetySection from "src/components/common/InsuranceSafetySection
 import LogoSlider from "src/components/common/LogoSlider";
 import SecurityCompliance from "src/components/common/SecurityComplianceSection";
 import SingleButton from "src/components/common/SingleButton";
-import { faithSafety, InsuranceHeroData, insureanceHerocardData } from "src/constants/Insurance";
+import { InsuranceHeroData, insureanceHerocardData } from "src/constants/Insurance";
 import { designForInsuranceData, insuranceCardsData, reatilSafety} from "src/constants/SolutionData";
 import RealEstateCommunciation from "src/components/common/RealEstateCommunciation";
 

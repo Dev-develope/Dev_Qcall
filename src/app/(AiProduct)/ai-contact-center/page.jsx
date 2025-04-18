@@ -7,7 +7,7 @@ import Hero from "src/components/common/Hero";
 import LogoSlider from "src/components/common/LogoSlider";
 import Pricing from "src/components/common/Pricing";
 import SingleButton from "src/components/common/SingleButton";
-import { pricingPlans, HumanLikeVoice } from "src/constants/ai_contact_center";
+import { pricingPlans } from "src/constants/ai_contact_center";
 import { herocardData } from "src/constants/ai_contact_center";
 import { AiContactHeroData, cardDataA, cardDataB, cardDataC, cardDataD, cardDataE, cardDataF } from "src/constants/ai_contact_center";
 import HumanVoiceImg from "../../../../public/images/2Product-ContactCentre/Wave.png"
