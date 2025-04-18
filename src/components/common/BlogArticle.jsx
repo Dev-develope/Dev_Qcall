@@ -28,7 +28,8 @@ const blogPosts = [
     image: meetingImg,
     category: 'it-managed-services',
     date: 'FEBRUARY 22, 2025',
-    readTime: '2 MINS READ'
+    readTime: '2 MINS READ',
+    link:""
   },
   {
     id: 2,
@@ -37,7 +38,8 @@ const blogPosts = [
     image: aibootImg,
     category: 'product-development',
     date: 'FEBRUARY 22, 2025',
-    readTime: '2 MINS READ'
+    readTime: '2 MINS READ',
+     link:"https://blog.qcall.ai/transforming-communication-the-benefits-of-an-ai-voicebot-for-inbound-and-outbound-calling/"
   },
   {
     id: 3,
@@ -46,7 +48,8 @@ const blogPosts = [
     image: audioImg,
     category: 'ai-integration',
     date: 'FEBRUARY 22, 2025',
-    readTime: '2 MINS READ'
+    readTime: '2 MINS READ',
+    link:"https://blog.qcall.ai/elevate-your-calling-experience-the-impact-of-ai-voicebots-on-inbound-and-outbound-communication/"
   },
   {
     id: 4,
@@ -55,7 +58,8 @@ const blogPosts = [
     image: CutomerEngageImg,
     category: 'technology',
     date: 'FEBRUARY 22, 2025',
-    readTime: '2 MINS READ'
+    readTime: '2 MINS READ',
+    link:"https://blog.qcall.ai/enhancing-customer-engagement-with-ai-voicebots-for-call-handling/"
   },
   {
     id: 5,
@@ -64,7 +68,8 @@ const blogPosts = [
     image: inovateImg,
     category: 'ai-integration',
     date: 'FEBRUARY 22, 2025',
-    readTime: '2 MINS READ'
+    readTime: '2 MINS READ',
+    link:"https://blog.qcall.ai/revolutionizing-communication-the-ultimate-ai-voicebot-for-your-call-management/"
   },
   {
     id: 6,
@@ -73,7 +78,8 @@ const blogPosts = [
     image: mobileImg,
     category: 'ai-devops',
     date: 'FEBRUARY 22, 2025',
-    readTime: '2 MINS READ'
+    readTime: '2 MINS READ',
+    linl:"https://blog.qcall.ai/transform-your-communication-harnessing-the-power-of-ai-voicebots-for-inbound-and-outbound-calling/"
   },
 ];
 
@@ -84,6 +90,8 @@ export default function BlogArticle() {
     ? blogPosts
     : blogPosts.filter(post => post.category === activeCategory);
 
+
+    console.log(filteredPosts,"filterPosts")
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
 
@@ -103,11 +111,11 @@ export default function BlogArticle() {
       </div>
 
 
-      <div className="flex gap-5 items-center justify-center flex-wrap">
+      <div className="flex gap-5 items-center justify-center flex-wrap cursor-pointer">
         {filteredPosts.map((post) => (
           <div key={post.id} className="border border-gray-100 w-[19rem] rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300" onClick={() => {
-            sessionStorage.setItem("selectedPost", JSON.stringify(post))
-            router.push("/blogdetail")
+            // sessionStorage.setItem("selectedPost", JSON.stringify(post))
+            router.push(post?.link)
           }}>
 
             <div className="relative h-48">

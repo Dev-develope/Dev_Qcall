@@ -367,11 +367,11 @@ export const menuItems = [
     ],
     hasChildren: true,
   },
-  {
-    id: 5,
-    text: "Plan & Pricing",
-    url: "/pricing",
-  }
+  // {
+  //   id: 5,
+  //   text: "Plan & Pricing",
+  //   url: "/pricing",
+  // }
 ];
 
 import img1 from "../../public/images/new-partners/1.png"
@@ -450,8 +450,8 @@ export const footerData = {
       title: "Company",
       links: [
         { name: "Home", href: "/" },
-        { name: "About Us", href: "/#" },
-        { name: "Contact Us", href: "/#" },
+        { name: "About Us", href: "https://www.qcall.ai/about" },
+        { name: "Contact Us", href: "https://www.qcall.ai/contact" },
         { name: "Privacy Policy", href: "/policy" },
         { name: "Terms of Use", href: "/termandcondition" }
       ]
@@ -481,7 +481,7 @@ export const footerData = {
     {
       title: "Resources",
       links: [
-        { name: "Pricing", href: "/pricing" },
+        // { name: "Pricing", href: "/pricing" },
         { name: "Partnership", href: "/partners" },
         { name: "Comparison", href: "/comparisons" },
         { name: "Enterprise Solution", href: "/enterprise" }
@@ -490,7 +490,7 @@ export const footerData = {
   ],
   contact: {
     phone: "+1-762-583-8255",
-    email: "support@QCall.ai.ai",
+    email: "support@qcall.ai",
     socials: [
       { icon: Facebook, href: "https://facebook.com/QCall.ai" },
       { icon: Linkedin, href: "https://linkedin.com/company/QCall.ai" },

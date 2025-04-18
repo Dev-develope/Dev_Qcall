@@ -20,6 +20,57 @@ import helpImg from "../../../../public/images/Product-Sales/help.png"
 import MinimizeImg from "../../../../public/images/Product-Sales/Minimize.png"
 import HumanVoiceImg from "../../../../public/images/2Product-ContactCentre/Wave.png"
 import HeroBanner from "src/components/common/heroBanner";
+
+export const metadata = {
+    title: "Ai Sales | QCall AI Choose What Works Best",
+    description:
+      "Ai Sales QCall AI with other options to find the best fit for your needs. Explore features and pricing to make the right choice for your business.",
+    canonical: new URL("https://qcall.ai/ai-sales"),
+    metadataBase: new URL("https://qcall.ai/ai-sales"),
+    keywords: [
+      "QCall AI",
+      "AI Outbound Calls",
+      "AI Inbound Calls",
+      "AI Calls",
+      "Sales Outreach",
+      "Email Marketing",
+      "Sales Growth",
+      "Email Growth",
+      "Email Alternatives",
+      "AI Call Center",
+      "Call Center Automation",
+      "Sales Automation",
+      "Email Automation",
+      "Lead Generation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+    ],
+    authors: [{ name: "QCall AI" }],
+    creator: "Kapil Karda",
+    publisher: "Kapil Karda",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    openGraph: {
+      title: "Ai Sales | QCall AI Choose What Works Best",
+      description:
+        "Ai Sales QCall AI with other options to find the best fit for your needs. Explore features and pricing to make the right choice for your business.",
+      url: new URL("https://qcall.ai/ai-sales"),
+      siteName: "QCall AI",
+      images: "https://www.qcall.ai/assets/cover.png/assets/cover.png",
+      type: "website",
+      locale: "en_US",
+      publishedTime: "2024-10-17T00:00:00.000Z",
+      authors: ["Kapil Karda"],
+    },
+  };
+
 export default function page() {
     return (<>
         <Hero data={aiSalesHeroData[0]} herocardData={herocardData} className="text-center">

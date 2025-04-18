@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import AiMythsSection from "src/components/common/AiMythSection";
 import CardItem1 from "src/components/common/CardItem1";
 import CardItem2 from "src/components/common/CardItem2";
@@ -30,6 +30,37 @@ import CardImage2 from "../../public/images/LandingPage/SHAPE2.png";
 // import backGroundVideo from "../../public/images/LandingPage/QCallAi Animation 2.mp4"
 import backGroundVideo from "../../public/images/LandingPage/Qcall.ai+video.mp4";
 import pricingImg from "../../public/videos/QCallAiAnimate.gif";
+
+
+ export const metadata = {
+  title: "QCall AI - 24/7 AI Agent Calling Platform",
+  description:
+    "QCall  AI utilizes generative AI to drive its voice-based sales automation tool, streamlining sales processes through AI-powered voice bots. Whether you're a startup or an enterprise, it's designed to facilitate business growth effortlessly.",
+  canonical: new URL("https://qcall.ai/"),
+  metadataBase: new URL("https://qcall.ai/"),
+  keywords: ["QCall AI", "AI Outbound Calls", "AI Inbound Calls", "AI Calls", "Sales Outreach", "Email Marketing", "Sales Growth", "Email Growth", "Email Alternatives", "AI Call Center", "Call Center Automation", "Sales Automation", "Email Automation", "Lead Generation", "Email Automation", "Email Automation", "Email Automation", "Email Automation", "Email Automation", "Email Automation"],
+  authors: [{ name: "QCall AI" }],
+  creator: "Kapil Karda",
+  publisher: "Kapil Karda",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "QCall AI - 24/7 AI Agent Calling Platform",
+    description:
+      "QCall  AI utilizes generative AI to drive its voice-based sales automation tool, streamlining sales processes through AI-powered voice bots. Whether you're a startup or an enterprise, it's designed to facilitate business growth effortlessly.",
+    url: new URL("https://qcall.ai/"),
+    siteName: "QCall AI",
+    images: "https://www.qcall.ai/assets/cover.png",
+    type: "website",
+    locale: "en_US",
+    publishedTime: '2024-10-17T00:00:00.000Z',
+    authors: ['Kapil Karda'],
+  },
+};
+
 export default function Home() {
   return (
     <>
