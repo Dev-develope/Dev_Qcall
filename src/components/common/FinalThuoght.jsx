@@ -24,7 +24,7 @@ export default function FinalThuoght() {
                         <p className="mt-4">The future of AI-powered conversations starts NOW.</p>
 
                         <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                            <CommonButton title="Let’s Talk Smarter. Let’s Talk AI" className="bg-[#00a7e6] text-white" />
+                            <CommonButton title="Let’s Talk Smarter. Let’s Talk AI" className="bg-[#00a7e6] text-white" route={"https://www.qcall.ai/"}/>
                         </div>
                     </div>
                 </div>

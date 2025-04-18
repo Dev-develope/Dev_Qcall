@@ -18,6 +18,57 @@ import connect from "../../../../public/images/qcallAi/3Solution-Retail Networks
 import unified from "../../../../public/images/qcallAi/3Solution-Retail Networks/unified.png"
 import record from "../../../../public/images/qcallAi/3Solution-Retail Networks/record.png"
 
+export const metadata = {
+    title: "Retail | QCall AI Choose What Works Best",
+    description:
+      "Retail QCall AI with other options to find the best fit for your needs. Explore features and pricing to make the right choice for your business.",
+    canonical: new URL("https://qcall.ai/retail"),
+    metadataBase: new URL("https://qcall.ai/retail"),
+    keywords: [
+      "QCall AI",
+      "AI Outbound Calls",
+      "AI Inbound Calls",
+      "AI Calls",
+      "Sales Outreach",
+      "Email Marketing",
+      "Sales Growth",
+      "Email Growth",
+      "Email Alternatives",
+      "AI Call Center",
+      "Call Center Automation",
+      "Sales Automation",
+      "Email Automation",
+      "Lead Generation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+    ],
+    authors: [{ name: "QCall AI" }],
+    creator: "Kapil Karda",
+    publisher: "Kapil Karda",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    openGraph: {
+      title: "Retail | QCall AI Choose What Works Best",
+      description:
+        "Retail QCall AI with other options to find the best fit for your needs. Explore features and pricing to make the right choice for your business.",
+      url: new URL("https://qcall.ai/retail"),
+      siteName: "QCall AI",
+      images: "https://www.qcall.ai/assets/cover.png/assets/cover.png",
+      type: "website",
+      locale: "en_US",
+      publishedTime: "2024-10-17T00:00:00.000Z",
+      authors: ["Kapil Karda"],
+    },
+  };
+
+
 export default function page() {
     return (<>
         <Hero data={retailHeroData[0]} herocardData={retailHerocardData}>

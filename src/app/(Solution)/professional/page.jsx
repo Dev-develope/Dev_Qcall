@@ -8,16 +8,63 @@ import InsuranceSafetySection from "src/components/common/InsuranceSafetySection
 import LogoSlider from "src/components/common/LogoSlider";
 import RetailFeatures from "src/components/common/RetailFeatures";
 import SingleButton from "src/components/common/SingleButton";
-import {leaglProfessionalDataA, leaglProfessionalDataB, leaglProfessionalDataC, ProfessionalDataA, ProfessionalDataB, ProfessionalDataC, ProfessionalDataD} from "src/constants/ai_contact_center";
-import { leaglProfeData, legalFeaturesData, legalHerocardData, legalHeroData, ProfessinalData, professionalFeaturesData, professionalHeroData, reatilSafety } from "src/constants/SolutionData";
-import securityImg from "../../../../public/images/qcallAi/3Solution-Legal Professionals/security.png"
-import boostproductImg from "../../../../public/images/qcallAi/3Solution-Legal Professionals/boostproduct.png"
-import trackclientImg from "../../../../public/images/qcallAi/3Solution-Legal Professionals/trackclient.png"
-
+import {ProfessionalDataA, ProfessionalDataB, ProfessionalDataC, ProfessionalDataD} from "src/constants/ai_contact_center";
+import { legalHerocardData, ProfessinalData, professionalFeaturesData, professionalHeroData, reatilSafety } from "src/constants/SolutionData";
 import ProfesImgA from "../../../../public/images/qcallAi/3Solution-Professional Services/ProfesImgA.png"
 import ProfesImgB from "../../../../public/images/qcallAi/3Solution-Professional Services/ProfesImgB.png"
 import ProfesImgC from "../../../../public/images/qcallAi/3Solution-Professional Services/ProfesImgC.png"
 import ProfesImgD from "../../../../public/images/qcallAi/3Solution-Professional Services/ProfesImgD.png"
+
+
+export const metadata = {
+    title: "Professional Services | QCall AI Choose What Works Best",
+    description:
+      "Professional Services QCall AI with other options to find the best fit for your needs. Explore features and pricing to make the right choice for your business.",
+    canonical: new URL("https://qcall.ai/professionalServices"),
+    metadataBase: new URL("https://qcall.ai/professionalServices"),
+    keywords: [
+      "QCall AI",
+      "AI Outbound Calls",
+      "AI Inbound Calls",
+      "AI Calls",
+      "Sales Outreach",
+      "Email Marketing",
+      "Sales Growth",
+      "Email Growth",
+      "Email Alternatives",
+      "AI Call Center",
+      "Call Center Automation",
+      "Sales Automation",
+      "Email Automation",
+      "Lead Generation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+      "Email Automation",
+    ],
+    authors: [{ name: "QCall AI" }],
+    creator: "Kapil Karda",
+    publisher: "Kapil Karda",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    openGraph: {
+      title: "Professional Services | QCall AI Choose What Works Best",
+      description:
+        "Professional Services QCall AI with other options to find the best fit for your needs. Explore features and pricing to make the right choice for your business.",
+      url: new URL("https://qcall.ai/professionalServices"),
+      siteName: "QCall AI",
+      images: "https://www.qcall.ai/assets/cover.png/assets/cover.png",
+      type: "website",
+      locale: "en_US",
+      publishedTime: "2024-10-17T00:00:00.000Z",
+      authors: ["Kapil Karda"],
+    },
+  };
 
 
 export default function page() {

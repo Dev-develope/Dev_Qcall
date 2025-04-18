@@ -367,11 +367,11 @@ export const menuItems = [
     ],
     hasChildren: true,
   },
-  {
-    id: 5,
-    text: "Plan & Pricing",
-    url: "/pricing",
-  }
+  // {
+  //   id: 5,
+  //   text: "Plan & Pricing",
+  //   url: "/pricing",
+  // }
 ];
 
 import img1 from "../../public/images/new-partners/1.png"
@@ -481,7 +481,7 @@ export const footerData = {
     {
       title: "Resources",
       links: [
-        { name: "Pricing", href: "/pricing" },
+        // { name: "Pricing", href: "/pricing" },
         { name: "Partnership", href: "/partners" },
         { name: "Comparison", href: "/comparisons" },
         { name: "Enterprise Solution", href: "/enterprise" }
