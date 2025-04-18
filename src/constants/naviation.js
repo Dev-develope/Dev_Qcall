@@ -490,7 +490,7 @@ export const footerData = {
   ],
   contact: {
     phone: "+1-762-583-8255",
-    email: "support@QCall.ai.ai",
+    email: "support@qcall.ai",
     socials: [
       { icon: Facebook, href: "https://facebook.com/QCall.ai" },
       { icon: Linkedin, href: "https://linkedin.com/company/QCall.ai" },

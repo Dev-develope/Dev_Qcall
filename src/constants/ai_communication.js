@@ -61,3 +61,19 @@ export const aiCommunicateCardDataC = [
         imageSrc: "/mnt/data/image.png"
     }
 ]
+
+
+export const AboutcardDatas = [
+    {
+      span: "Why QCall AI?",
+      h1: "AI Calls Made Easy",
+      para:
+        "At QCall AI, we make calling easier for everyone. Our AI calling software helps different industries solve their calling problems and connect with customers better.",
+      list: [
+        { text: "Save Time: Let our AI handle your calls so you can focus on other important tasks." },
+        { text: "Works for Everyone: Whether you’re in sales or customer service, we’ve got you covered." },
+        { text: "Talk Like a Human: Our AI sounds natural, making conversations feel real." },
+      ],
+    },
+  ];
+  
