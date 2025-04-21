@@ -175,7 +175,7 @@ export default function Navbar({ className }) {
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 left-0 min-h-full w-full bg-[#161616]  text-white transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-dvh w-full bg-[#161616]  text-white overflow-scroll transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
