@@ -59,9 +59,7 @@ export default function Navbar({ className }) {
   return (
     <nav
       className={`${className} fixed top-0 left-0 w-[100dvw] max-w-full z-[9999] py-3 transition-all duration-300 ${
-        scrolled
-          ? "bg-white shadow-2xl"
-          : " text-white"
+        scrolled ? "bg-white shadow-2xl" : " text-white"
       }`}
       // className={`${className} fixed top-0 left-0 w-[100dvw] max-w-full z-[9999] py-2 transition-all duration-300 ${
       //   scrolled
@@ -74,7 +72,7 @@ export default function Navbar({ className }) {
         <div className="flex items-center lg:w-1/2 md:w-full justify-around space-x-8">
           <Link href="/">
             <Image
-              src={scrolled?logo2:logo}
+              src={scrolled ? logo2 : logo}
               alt="logo"
               height={30}
               width={100}
@@ -127,7 +125,7 @@ export default function Navbar({ className }) {
                             </div>
                           </div>
                           <div className="p-1 rounded-full border border-gray-500 hover:bg-[#00a7e6]">
-                          <ChevronRight className="text-white  transition-colors duration-200" />
+                            <ChevronRight className="text-white  transition-colors duration-200" />
                           </div>
                         </Link>
                       ))}
@@ -167,7 +165,7 @@ export default function Navbar({ className }) {
           <div className=" mr-3">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className={scrolled?`text-black`:`text-white`}
+              className={scrolled ? `text-black` : `text-white`}
             >
               {menuOpen ? <X size={24} /> : <Menu size={30} />}
             </button>
@@ -195,7 +193,11 @@ export default function Navbar({ className }) {
           {menuItems.map((item) => (
             <div key={item.id} className="w-full text-left">
               <button
-                className={`w-full text-md font-bold py-3 flex justify-between items-center transition-colors duration-200 ${openSubMenu === item.id? "text-[#00a7e6]": "text-white hover:text-[#00a7e6]"}`}
+                className={`w-full text-md font-bold py-3 flex justify-between items-center transition-colors duration-200 ${
+                  openSubMenu === item.id
+                    ? "text-[#00a7e6]"
+                    : "text-white hover:text-[#00a7e6]"
+                }`}
                 onClick={() => item.hasChildren && toggleSubMenu(item.id)}
               >
                 {item.text}
@@ -218,7 +220,7 @@ export default function Navbar({ className }) {
                 >
                   <ul className="bg-[#121212] text-white py-2 border-t border-gray-700 overflow-y-auto">
                     {item.subMenu.map((sub) => {
-                      const isActive = pathname === sub.url
+                      const isActive = pathname === sub.url;
 
                       return (
                         <li
@@ -229,7 +231,18 @@ export default function Navbar({ className }) {
                               : "hover:text-[#00a7e6]"
                           }`}
                         >
-                          <Link href={sub.url} className="block">
+                          {/* <Link href={sub.url} className="block">
+                            {sub.text}
+                          </Link> */}
+
+                          <Link
+                            href={sub.url}
+                            className="block"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setMenuOpen(false); // ✅ Close mobile menu
+                            }}
+                          >
                             {sub.text}
                           </Link>
                         </li>

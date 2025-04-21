@@ -40,7 +40,8 @@ export default function Pricing({ pricingPlans, video, img = circleGIf }) {
                     <p className="text-xs mt-2 max-w-md">
                         {plan.description}
                     </p>
-                    <CommonButton title={plan.buttonText} className="text-sm mt-6 bg-[#00a7e6] rounded-full" route={"/pricing"}/>
+                    <CommonButton title={plan.buttonText} className="text-sm mt-6 bg-[#00a7e6] rounded-full" />     {/* route={"/pricing"} */}
+                 
                 </div>
             ))}
         </div>
