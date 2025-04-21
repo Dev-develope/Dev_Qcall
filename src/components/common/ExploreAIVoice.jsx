@@ -95,7 +95,7 @@ export default function ExploreAIVoice() {
         {/* AI Voice Cards */}
         <div className="grid md:grid-cols-3 gap-6 mt-6">
           {filteredAgents?.map((agent, ind) => (
-            <div key={agent} className="bg-white p-4 rounded-lg shadow-md">
+            <div key={agent} className="bg-white p-4 rounded-2xl shadow-lg  transition-all ease-in-out duration-500 hover:scale-105">
               <div className="flex justify-between items-center">
                 <h3 className="text-lg font-light">Agent {agent}</h3>
                 <span className="border text-xs px-2 py-1 rounded-full">
