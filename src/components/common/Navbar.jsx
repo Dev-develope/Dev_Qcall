@@ -218,7 +218,7 @@ export default function Navbar({ className }) {
                       : "max-h-0 opacity-0"
                   }`}
                 >
-                  <ul className="bg-[#121212] text-white py-2 border-t border-gray-700 overflow-y-auto">
+                  {/* <ul className="bg-[#121212] text-white py-2 border-t border-gray-700 overflow-y-auto">
                     {item.subMenu.map((sub) => {
                       const isActive = pathname === sub.url;
 
@@ -231,24 +231,47 @@ export default function Navbar({ className }) {
                               : "hover:text-[#00a7e6]"
                           }`}
                         >
-                          {/* <Link href={sub.url} className="block">
-                            {sub.text}
-                          </Link> */}
-
                           <Link
                             href={sub.url}
                             className="block"
                             onClick={(e) => {
                               e.stopPropagation();
-                              setMenuOpen(false); // ✅ Close mobile menu
-                            }}
+                              setMenuOpen(false);}}
                           >
                             {sub.text}
                           </Link>
                         </li>
                       );
                     })}
-                  </ul>
+                  </ul> */}
+                  {openSubMenu === item.id && (
+                    <ul className="bg-[#121212] text-white py-2 border-t border-gray-700 overflow-y-auto">
+                      {item.subMenu.map((sub) => {
+                        const isActive = pathname === sub.url;
+                        return (
+                          <li
+                            key={sub.url}
+                            className={`py-2 px-4 ${
+                              isActive
+                                ? "text-[#00a7e6] font-bold"
+                                : "hover:text-[#00a7e6]"
+                            }`}
+                          >
+                            <Link
+                              href={sub.url}
+                              className="block"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setMenuOpen(false); 
+                              }}
+                            >
+                              {sub.text}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
                 </div>
               )}
             </div>
