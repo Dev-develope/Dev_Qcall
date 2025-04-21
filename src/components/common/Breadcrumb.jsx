@@ -11,13 +11,13 @@ const Breadcrumb = ({route,BreadcrumbData}) => {
 
       <span className="text-gray-400">›</span> */}
 
-      <Link href="/projects" className="font-bold hover:text-gray-700 text-2xl">
+      <Link href="/" className="font-light hover:text-gray-700 text-xl">
       Home
       </Link>
 
       <span className="font-bold text-gray-400 text-2xl">›</span>
 
-      <span className=" font-bold text-2xl text-[#00a7e6] underline decoration-4">About Company</span>
+      <span className=" font-light text-xl text-[#00a7e6] underline decoration-2">About Company</span>
     </nav>
   );
 };

@@ -361,7 +361,7 @@ export const menuItems = [
       },
       {
         text: "Help Centers",
-        url: "/helpcenter",
+        url: "/contact",
         sortDec: "Manging your Account,Safety And security"
       }
     ],

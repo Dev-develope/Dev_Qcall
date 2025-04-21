@@ -7,12 +7,15 @@ import inovateimg from "../../../public/images/Blogs/aiCommunicate.png"
 import { AboutcardDatas} from "src/constants/ai_communication";
 import AboutUsCard from "src/components/common/AboutUsCard";
 import AboutThreeCard from "src/components/common/AboutThreeCard";
+import Breadcrumb from "src/components/common/Breadcrumb";
 export default function page() {
     const path = usePathname();
     const isBlogPage = path === "/blog";
     const policyData = { para: "About", heading: " About US" }
     return (<>
-       <HeroBackgroundImage data={policyData} img ={BolgImg}/>
+      <HeroBackgroundImage data={policyData} img ={BolgImg}>
+            <Breadcrumb/>
+            </HeroBackgroundImage>
         <AboutUsCard cardDatas={AboutcardDatas} img={inovateimg}/>
         <AboutThreeCard/>
         <Exploring />
