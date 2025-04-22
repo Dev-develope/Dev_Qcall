@@ -1,6 +1,7 @@
 import { ShieldCheck, Lock, Database, Cloud } from "lucide-react";
 import CommonButton from "./Button";
 import Image from "next/image";
+import { FarmerMotionCardCenter } from "./FarmerMotion";
 
 export default function SecurityCompliance({ securityData }) {
   return (
@@ -15,27 +16,29 @@ export default function SecurityCompliance({ securityData }) {
         {securityData?.para}
       </p>
       <div className="flex justify-center items-center">
-        <div className="grid md:grid-cols-2 gap-6 mt-10 max-w-4xl">
-          {securityData?.features?.map((item, index) => (
-            <div
-              key={index}
-              className="border border-[#00a7e6] rounded-lg p-6 items-start space-x-4 shadow-sm hover:shadow-md transition"
-            >
-              <div className="flex justify-between items-center mb-2 bg-[#00a7e6] rounded-full max-w-12 max-h-12">
-                {/* {item?.icon} */}
-                <Image src={item?.icon} alt="logo" />
+        <FarmerMotionCardCenter>
+          <div className="grid md:grid-cols-2 gap-6 mt-10 max-w-4xl">
+            {securityData?.features?.map((item, index) => (
+              <div
+                key={index}
+                className="border border-[#00a7e6] rounded-lg p-6 items-start space-x-4 shadow-sm hover:shadow-md transition"
+              >
+                <div className="flex justify-between items-center mb-2 bg-[#00a7e6] rounded-full max-w-12 max-h-12">
+                  {/* {item?.icon} */}
+                  <Image src={item?.icon} alt="logo" />
+                </div>
+                <div className="text-left">
+                  <h3 className="text-lg font-light text-gray-900">
+                    {item?.title}
+                  </h3>
+                  <p className="text-gray-600 mt-1 text-sm">
+                    {item?.description}
+                  </p>
+                </div>
               </div>
-              <div className="text-left">
-                <h3 className="text-lg font-light text-gray-900">
-                  {item?.title}
-                </h3>
-                <p className="text-gray-600 mt-1 text-sm">
-                  {item?.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </FarmerMotionCardCenter>
       </div>
       <div className="flex justify-center items-center">
         <CommonButton
