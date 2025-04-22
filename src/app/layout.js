@@ -1,5 +1,6 @@
 "use client";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk } from 'next/font/google';
 import "./globals.css";
 import Footer from "src/components/common/Footer";
 import Head from "next/head";
@@ -10,16 +11,21 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],        // or 'latin-ext' if needed
+  weight: ['400', '500', '600', '700'], // add whatever weights you plan to use
+  variable: '--font-space-grotesk',     // optional if you want to use as CSS variable
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export default function RootLayout({ children }) {
 
@@ -180,7 +186,7 @@ export default function RootLayout({ children }) {
         </noscript>
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${spaceGrotesk.className} antialiased`}
       >
         <ToastContainer
           position="top-right"
