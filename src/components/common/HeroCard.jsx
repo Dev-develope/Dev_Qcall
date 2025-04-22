@@ -56,7 +56,6 @@ const HeroCard = ({ herocardData, className, sampleData }) => {
                     {card?.list && (
                       <ul className="list-inside text-gray-600 text-sm mt-5">
                         {card?.list?.map((item, i) => (
-                          <>
                             <div className="flex gap-2" key={i}>
                               <div className="text-xs text-[#00a7e6]">✦</div>
                               <div>
@@ -65,7 +64,6 @@ const HeroCard = ({ herocardData, className, sampleData }) => {
                                 </li>
                               </div>
                             </div>
-                          </>
                         ))}
                       </ul>
                     )}
