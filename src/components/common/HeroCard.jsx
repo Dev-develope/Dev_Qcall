@@ -3,6 +3,7 @@ import React from "react";
 import HeroTable from "./HeroTable";
 import { usePathname } from "next/navigation";
 import { Flower } from "lucide-react";
+import { FarmerMotionCardCenter } from "./FarmerMotion";
 const HeroCard = ({ herocardData, className, sampleData }) => {
   const path = usePathname();
   const isHelpCenterPage = path === "/helpcenter";
@@ -34,6 +35,7 @@ const HeroCard = ({ herocardData, className, sampleData }) => {
             )}
           </div>
           {!sampleData ? (
+            <FarmerMotionCardCenter>
             <div className="p-8">
               <div className={`${className} grid md:grid-cols-3 gap-4`}>
                 {herocardData[0]?.cards?.map((card, index) => (
@@ -72,6 +74,7 @@ const HeroCard = ({ herocardData, className, sampleData }) => {
                 ))}
               </div>
             </div>
+            </FarmerMotionCardCenter>
           ) : (
             <HeroTable data={sampleData} />
           )}
