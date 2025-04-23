@@ -1,4 +1,3 @@
-// src/components/common/FarmerMotion.jsx
 'use client';
 import { motion } from "framer-motion";
 
@@ -39,7 +38,7 @@ const FarmerMotionCardCenter = ({ children }) => {
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 1.5, ease: 'easeInOut' }}
+      transition={{ duration: 0.6, ease: 'easeIn' }}
     >
       {children}
     </motion.div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CommonButton from "./Button";
+import { FarmerMotionCardCenter } from "./FarmerMotion";
 
 const stepsData = [
   {
@@ -35,19 +36,28 @@ export default function Steps({ img, img2 }) {
       {/* Steps Section */}
       <div className="flex flex-wrap items-center justify-center gap-4">
         {stepsData.map((step, index) => (
-          <div key={index} className="relative h-[250px] w-[250px] md:w-[250px] rounded-2xl overflow-hidden">
-            <Image
-              src={index === 2 ? img2 : img}
-              // src={img2}
-              alt="image"
-              objectFit="cover"
-              className="absolute inset-0"
-            />
-            <div className=" absolute inset-0 flex flex-col items-start justify-center px-6">
-              <h3 className="w-[10rem] font-bold text-lg text-center">{step.title}</h3>
-              <p className=" mt-2 max-w-[10rem] text-xs text-center">{step.description}</p>
+          <FarmerMotionCardCenter>
+            <div
+              key={index}
+              className="relative h-[250px] w-[250px] md:w-[250px] rounded-2xl overflow-hidden"
+            >
+              <Image
+                src={index === 2 ? img2 : img}
+                // src={img2}
+                alt="image"
+                objectFit="cover"
+                className="absolute inset-0"
+              />
+              <div className=" absolute inset-0 flex flex-col items-start justify-center px-6">
+                <h3 className="w-[10rem] font-bold text-lg text-center">
+                  {step.title}
+                </h3>
+                <p className=" mt-2 max-w-[10rem] text-xs text-center">
+                  {step.description}
+                </p>
+              </div>
             </div>
-          </div>
+          </FarmerMotionCardCenter>
         ))}
       </div>
 
