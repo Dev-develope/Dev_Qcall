@@ -2,7 +2,7 @@
 import React from "react";
 import CommonButton from "./Button";
 import Image from "next/image";
-import { FarmerMotionCardCenter1 } from "./FarmerMotion";
+import FarmerMotionCard, { FarmerMotionCardCenter1 } from "./FarmerMotion";
 
 const FeatureCard = ({ icon, title, description }) => (
   <div className="bg-white rounded-2xl p-6 flex flex-col gap-6 w-full h-full border border-[#00a7e6]">
@@ -41,13 +41,13 @@ const FutureCard = ({ data }) => {
         )}
 
         {/* Feature Cards */}
-        <FarmerMotionCardCenter1>
+        <FarmerMotionCard>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-10 text-start">
             {data?.features?.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
             ))}
           </div>
-        </FarmerMotionCardCenter1>
+        </FarmerMotionCard>
 
         {data.description2 ? (
           <p className="max-w-xl mb-10">{data.description2}</p>
