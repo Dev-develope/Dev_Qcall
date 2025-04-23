@@ -34,9 +34,9 @@ export default function Steps({ img, img2 }) {
       </p>
 
       {/* Steps Section */}
-      <div className="flex flex-wrap items-center justify-center gap-4">
-        {stepsData.map((step, index) => (
-          <FarmerMotionCardCenter>
+      <FarmerMotionCardCenter>
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          {stepsData.map((step, index) => (
             <div
               key={index}
               className="relative h-[250px] w-[250px] md:w-[250px] rounded-2xl overflow-hidden"
@@ -57,9 +57,9 @@ export default function Steps({ img, img2 }) {
                 </p>
               </div>
             </div>
-          </FarmerMotionCardCenter>
-        ))}
-      </div>
+          ))}
+        </div>
+      </FarmerMotionCardCenter>
 
       <p className="text-center text-gray-700 mt-8">It’s that simple!</p>
       <CommonButton
