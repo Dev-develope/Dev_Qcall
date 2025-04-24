@@ -13,6 +13,7 @@ import { leaglProfeData, legalFeaturesData1, legalHerocardData, legalHeroData, r
 import securityImg from "../../../../public/images/qcallAi/3Solution-Legal Professionals/security.png"
 import boostproductImg from "../../../../public/images/qcallAi/3Solution-Legal Professionals/boostproduct.png"
 import trackclientImg from "../../../../public/images/qcallAi/3Solution-Legal Professionals/trackclient.png"
+import { FarmerMotion } from "src/components/common/FarmerMotion";
 
 
 
@@ -72,7 +73,9 @@ export default function page() {
         <Hero data={legalHeroData[0]} herocardData={legalHerocardData}>
             <SingleButton title="Get a Demo Today!" route={"https://cal.com/team/tinycheque/qcall"}/>
         </Hero>
+        <FarmerMotion>
         <LogoSlider />
+        </FarmerMotion>
         <InsuranceSafetySection data={reatilSafety[0]} />
         <ConnectwithTeams data={leaglProfeData} />
         <CommonCard cardDatas={leaglProfessionalDataA} img={trackclientImg}/>
